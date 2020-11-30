@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://e205723.github.io/en/machine_learning/how_to_make_neural_network/</loc>
+    <lastmod>2020-12-01T00:35:13+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://e205723.github.io/machine_learning/how_to_make_neural_network/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://e205723.github.io/en/machine_learning/how_to_make_neural_network/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://e205723.github.io/en/</loc>
+    <lastmod>2020-12-01T00:35:13+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://e205723.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://e205723.github.io/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://e205723.github.io/en/diary/</loc>
+    <lastmod>2020-12-01T00:35:13+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://e205723.github.io/diary/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://e205723.github.io/en/diary/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://e205723.github.io/en/language_aquisition/</loc>
+    <lastmod>2020-12-01T00:35:13+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://e205723.github.io/language_aquisition/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://e205723.github.io/en/language_aquisition/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://e205723.github.io/en/machine_learning/</loc>
+    <lastmod>2020-12-01T00:35:13+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://e205723.github.io/machine_learning/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://e205723.github.io/en/machine_learning/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://e205723.github.io/en/study/</loc>
+    <lastmod>2020-12-01T00:35:13+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://e205723.github.io/study/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://e205723.github.io/en/study/"
+                />
+  </url>
+  
+</urlset>
