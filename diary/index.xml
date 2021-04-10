@@ -8,6 +8,15 @@
     <language>ja-jp</language>
     <lastBuildDate>Mon, 30 Sep 2019 08:00:00 +0000</lastBuildDate><atom:link href="https://e205723.github.io/diary/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>自己紹介/PR</title>
+      <link>https://e205723.github.io/diary/my_pr/</link>
+      <pubDate>Sat, 10 Apr 2021 16:15:17 +0900</pubDate>
+      
+      <guid>https://e205723.github.io/diary/my_pr/</guid>
+      <description>テーブルで自己紹介   Key Value     氏名 佐野巧曜 (Sano Yoshiaki)   高校 カナダ, ブリテッシュコロンビア州のマウントダグラス高校   大学 / 学部 / コース / 学年 琉球大学 / 工学部 / 知能情報コース / B2   読み書き話す聞くなどができる自然言語 日本語（ネイティブスピーカー), 英語(非ネイティブ)   GTEC LISTENING 191, READING 174 -&amp;gt; 交渉, プレゼンテーション, マネジメントなどの, ほぼどのような場面でも自信を持って英語業務に使えるプロフェッショナルレベル相当   日常的に使うプログラミング言語 Python   触ったことがあるプログラミング言語 Ruby, C++, Java, Swift   愛読書 戦略的データサイエンス入門   今何してる 琉球大学の知能情報コースのネットワークやサーバ等を学生主体で運営保守する「システム管理チーム」で見習いをしています   苦手なこと/勉強したいこと インフラ周り, ネットワーク, セキュリティ, gitが全部初心者です   長所 「運がとにかくいい」, 「数は少ないが友人関係に恵まれている」, 「手を動かしてする勉強が好き」, 「性格が良い」   短所 「図々しい」, 「馴れ馴れしい」, 「座学が苦手」, 「性格が悪い」    製作物 ブログ B1の頃は, 琉大 Advent Calendar 2020  で「ニューラルネットワークの仕組みと実装の解説  」と「お金を稼ぐための機械学習  」という記事を書きました</description>
+    </item>
+    
+    <item>
       <title>優美な屍骸は新しい葡萄酒を飲むだろう</title>
       <link>https://e205723.github.io/diary/le_cadavre_exquis_boira_le_vin_nouveau/</link>
       <pubDate>Wed, 24 Mar 2021 15:03:58 +0900</pubDate>
