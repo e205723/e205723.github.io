@@ -53,11 +53,9 @@
 
 
 
-  
-
-<title>rienNeVaPlusのブログ</title>
+<title>Vimのノーマルモードのコマンド</title>
 <meta name="author" content="rienNeVaPlus">
-<meta name="description" content="rienNeVaPlusのホームページ">
+<meta name="description" content="言うなれば自分用ってやつ">
 
 
 
@@ -80,10 +78,10 @@
 
 
 
-<meta property="og:url" content="https://e205723.github.io/" />
+<meta property="og:url" content="https://e205723.github.io/memorandum/vim_normal_mode/" />
 <meta property="og:site_name" content="" />
-<meta property="og:title" content="rienNeVaPlusのブログ" />
-<meta property="og:description" content="機械学習、言語習得、rienNeVaPlusに興味がありましたら、私のブログを読んでください。" />
+<meta property="og:title" content="Vimのノーマルモードのコマンド" />
+<meta property="og:description" content="言うなれば自分用ってやつ" />
 <meta property="og:image" content="https://e205723.github.io/" />
 <meta property="og:type" content="article" />
 <meta property="og:locale" content="" />
@@ -95,9 +93,9 @@
   <meta name="twitter:site" content="@rienNeVaPlusOne" />
 
 
-<meta property="twitter:url" content="https://e205723.github.io/" />
-<meta property="twitter:title" content="rienNeVaPlusのブログ" />
-<meta property="twitter:description" content="機械学習、言語習得、rienNeVaPlusに興味がありましたら、私のブログを読んでください。" />
+<meta property="twitter:url" content="https://e205723.github.io/memorandum/vim_normal_mode/" />
+<meta property="twitter:title" content="Vimのノーマルモードのコマンド" />
+<meta property="twitter:description" content="言うなれば自分用ってやつ" />
 <meta property="twitter:image" content="https://e205723.github.io/" />
 
 
@@ -107,6 +105,8 @@
 
 
 
+  
+    
   
 
 
@@ -123,9 +123,9 @@
       "@type": "WebPage",
       "@id": "https://e205723.github.io/"
     },
-    "name" : "Home",
-    "headline" : "Home",
-    "description" : "機械学習、言語習得、rienNeVaPlusに興味がありましたら、私のブログを読んでください。",
+    "name" : "Vimのノーマルモードのコマンド",
+    "headline" : "Vimのノーマルモードのコマンド",
+    "description" : "言うなれば自分用ってやつ",
     "inLanguage" : "ja",
     "image": "https://e205723.github.io/",
     "author" : "rienNeVaPlus",
@@ -139,13 +139,13 @@
       }
     },
     "copyrightYear" : "2021",
-    "datePublished": "2020-01-01",
+    "datePublished": "2021-04-17",
     "dateModified" : "2021-04-23",
-    "url" : "https://e205723.github.io/",
-    "wordCount" : "15",
+    "url" : "https://e205723.github.io/memorandum/vim_normal_mode/",
+    "wordCount" : "263",
     "keywords" : [ "Blog" ],
     "genre": ["Blog"],
-    
+    "articleBody": " どんな人がこの記事を読むべきか この記事の対象は以下の条件に当てはまる人です。\n インサートモードで文字を入力することぐらいしかVimを活用できていない :q, :qwくらいしかコマンドを知らない Vimがなぜ人気なのかわからない人   または、\n 備忘録的なのが欲しい方 ちょくちょくノーマルモードのコマンドを忘れてしまう方   という感じです。\nVimの良さを知ろう Vimの素晴らしさはなんと言っても、「起動が速いこと」と「モード」が便利すぎることです。\nどれくらい速いか vim --startuptime time.txt これをコマンドで実行してみてください。\nvimが開きます。何も書かれていませんが、:qで抜けて\nless time.txt 上記のコマンドを実行すると\nvimの起動までにかかる時間(msec)が記述されているはずです。\n私の場合は20.219msecで、秒にすると0.020219secでした。\n数あるテキストエディタの起動時間では、これはかなり速い方です。\nモードとは何か 初めてVimに触れたとき、Vimが開かれた直後に文字を入力しようとしても「何も入力されない!」ってなったことありませんか?\nこれは単に、モードがインサートモードになっていないからなんですよね。\n一般的なIDEに慣れ親しんでいる人は不便に感じるかもしれませんが、このモードって概念がとても優れているんですよ。\nVimのモードを大まかに羅列すると「ノーマルモード」、「コマンドラインモード」、「インサートモード」、「ビジュアルモード」、「ターミナルモード」に分類することができます。\n  モード 目的     ノーマルモード カーソル移動, モード変更, コマンド   コマンドモード コマンド   インサートモード 文字の入力   ビジュアルモード 文字の選択   ターミナルモード ターミナル操作    ノーマルモード ノーマルモードのコマンドについて Vimはコマンドを駆使することでテキストの編集をすばやく行うことができます。よって、沢山のコマンドやそれらの組み合わせを勉強することで、Vimの作業効率を図ることができます。\nノーマルモードのコマンドを使うに当たって、あらかじめ知っておくと便利なことを紹介します。\n\u0026lt;数字\u0026gt; + \u0026lt;コマンド\u0026gt;と行った形式でコマンドを入力すると、入力された\u0026lt;コマンド\u0026gt;が\u0026lt;数字\u0026gt;分行われます。\nまた、.(ドット)と入力するだけで前に実行されたコマンドや処理を現在のカーソル上で再実行してくれます。これはインサートモードで行った処理も再実行してくれるので、このコマンドはかなり重宝します。\nでは、早速コマンドを覚えていきましょう。\nまずはモーションコマンドから VimはIDEのようにマウスでカーソルの位置をしたりできないので、初心者の方はとりあえず十字キーでカーソル移動をしてしまうことがあると思います。しかしながら、カーソル移動をするとき、Vimmerの前で十字キーを使ってはいけません。彼らは怒ってしまいます。\nh,j,k,lで移動しよう 「なら、Vimmerに怒られないために、どうやってカーソル移動をすればいいんだ！」ってなる初心者がいるかも知れません。安心してください、h,j,k,lで移動すればいいのです。\n  コマンド 操作     h 左へ1つカーソルを移動   j 下へ1つカーソルを移動   k 上へ1つカーソルを移動   l 右へ1つカーソルを移動    複数回移動したいなら、始めに数字を添えるといいです。\n\u0026lt;数字\u0026gt; + \u0026lt;コマンド\u0026gt;\n具体例で説明します、\n 10 + j\nこれは「10回jを入力」 = 「10回下へカーソルを移動する」ということになります。\n 1つだけ移動だけじゃ不便?それならw,e,bを覚えよう 「1文字だけでは素早い作業ができない!」って感じるかも知れません、そんな時は単語単位でカーソルを移動してくれるコマンドを使いましょう。\n  コマンド 操作     w 次の単語へカーソルを移動   e 単語の最後の文字にカーソルを移動   b 前の単語へカーソルを移動    もっとモーションコマンドを知りたい貪欲な人へ 応用的なモーションコマンドを紹介します。\n中には行数に関するモーションコマンドが含まれますが、\n:set number または\n:set nu で行数を表示することができます。\nなお、行数の表示が鬱陶しい場合、\n:set nonumber または\n:set nonu で行数の表示をオフにすることができます。\n  コマンド 操作     0 または ^ 行の先頭へカーソルを移動   $ 行の最後へカーソルを移動   f + \u0026lt;任意の文字\u0026gt;(1文字だけ) 現在のカーソルの位置からfの後に打った文字を同じ行の中から探して最初に見つけたところにカーソルを移動   t + \u0026lt;任意の文字\u0026gt;(1文字だけ) 現在のカーソルの位置からfの後に打った文字を同じ行の中から探して最初に見つけたところの1個の文字にカーソルを移動   gg ファイルの先頭へカーソルを移動   G (Shift + g) ファイルの最後へカーソルを移動   \u0026lt;数字\u0026gt; + G \u0026lt;数字\u0026gt;行目へカーソルを移動   \u0026lt;数字\u0026gt; + Enter 現在のカーソルの位置からあと\u0026lt;数字\u0026gt;行目進んだ場所へカーソルを移動   H ウィンドウ内の上にカーソルを移動   M ウィンドウ内の中にカーソルを移動   L ウィンドウ内の下にカーソルを移動   % ()、{}、[]などの括弧の片方の上にカーソルを置いて実行すると、対応する一方の括弧へカーソルを移動する   Ctrl + o 古いカーソル位置に戻る   Ctrl + i 新しいカーソル位置に進む    f + \u0026lt;任意の文字\u0026gt;に関して、fのあとに入力した\u0026lt;任意の文字\u0026gt;が現在の文に複数存在している場合、コマンド実行後、;を押して次の候補の位置へカーソルを移動、,で前の候補の位置へカーソルを移動することができます。\nまたt + \u0026lt;任意の文字\u0026gt;に関しても同じ操作が可能です。\nスクロール操作に関するコマンド 続いてスクロール操作に関するコマンドを学びましょう。\n  コマンド 操作     Ctrl + e 1行スクールダウン   Ctrl + y 1行スクロールアップ   Ctrl + d 半画面スクロールダウン   Ctrl + u 半画面スクロールアップ   Ctrl + f 1画面スクロールダウン   Ctrl + b 1画面スクロールアップ   z + Enter または z + t 現在のカーソルが画面の1番上になるようにスクロール   z + . 現在のカーソルが画面の中央になるようにスクロール   z + - 現在のカーソルが画面の1番下になるようにスクロール    オペレータコマンドも必須 モーションコマンドを覚えたらオペレータコマンドも覚えましょう。以下の4つのオペレータコマンドは\u0026lt;オペレーションコマンド\u0026gt; + \u0026lt;モーションコマンド\u0026gt;という風に組み合わせることで、使うことができます。\n  コマンド 操作     y ヤンク(コピーのこと)   d 切り取り   c 変更   g カーソル移動    gに関して、g;で「直前に変更した位置にカーソルを移動」という処理になり再びg;と入力することで変更リストを遡ることができます。また、g,では「遡った変更リストを逆順に進め, カーソルを移動をする」という処理になり、これも再びg,と入力することで変更リストを逆順に進めることができます。\nオペレータコマンドとモーションコマンドの組み合わせの仕方の例を紹介します。\n y(ヤンク) + 2(2回) + l(右へカーソルを移動)\nこれは「現在のカーソルから2回右へカーソルを移動した位置までの範囲をヤンクする」という意味になります。」\n d(切り取り) + 3(3回) + e(単語の最後へカーソルを移動)\nこれは「現在のカーソルが乗っている単語を含む、現在カーソル以降の3単語を切り取りする」という意味になります。\n 色々なコマンド 他にも色々なコマンドが存在します。\n  コマンド 操作     yy 1行をヤンク(コピー)   Y 現在のカーソルから行末までヤンク(コピー)   dd 1行を切り取り   D 現在のカーソルから行末まで切り取り   p 現在のカーソルの後にプット(ペースト)   P 現在のカーソルの前にプット(ペースト)   u 変更を1個戻す   U 行の中の最近の変更を全て戻す   * カーソル下の単語を下方向に検索   # カーソル下の単語を上方向に検索   Ctrl + r 戻された変更をやり直す(redoする)   Ctrl + z Vimを一時停止してターミナルに戻る、ターミナルでfgコマンドと叩いて再開   ZZ 保存して終了(:wqと同じ)    "
   }
 </script>
 
@@ -177,17 +177,21 @@
       <div class="column is-8 is-offset-2">
         <h1 class="title is-spaced">
           
-            rienNeVaPlusのブログ
+            Vimのノーマルモードのコマンド
           
         </h1>
         <p class="subtitle is-6">
           
-            機械学習、言語習得、rienNeVaPlusに興味がありましたら、私のブログを読んでください。
+            言うなれば自分用ってやつ
           
         </p>
         <nav class="breadcrumb" aria-label="breadcrumbs">
-  <ul><li class="is-active">
-      <a href="#" aria-current="page" class="normal-link">Home</a>
+  <ul><li>
+      <a href="https://e205723.github.io/">Home</a>
+    </li><li>
+      <a href="https://e205723.github.io/memorandum/">Memorandum</a>
+    </li><li class="is-active">
+      <a href="#" aria-current="page" class="normal-link">Vimのノーマルモードのコマンド</a>
     </li></ul>
 </nav>
       </div>
@@ -214,7 +218,7 @@
 </script>
 
       <script>
-  console.log('Hugo Debug: ', "1")
+  console.log('Hugo Debug: ', "0")
 </script>
 
       
@@ -232,10 +236,12 @@
 
             
 
-<a class="button is-pulled-right normal-link" href="https://github.com/peaceiris/hugo-theme-iris/edit/master/exampleSite/content/ja/_index.md">Edit</a>
+<a class="button is-pulled-right normal-link" href="https://github.com/peaceiris/hugo-theme-iris/edit/master/exampleSite/content/ja/memorandum/vim_normal_mode.md">Edit</a>
 
 
             
+  
+
   
 
 
@@ -251,65 +257,448 @@
 
 
   
-</section><section class="section"><h2 class="title is-3" id="riennevaplus" class="title is-5">rienNeVaPlus</h2>
+</section><section class="section"><h2 class="title is-3" id="どんな人がこの記事を読むべきか" class="title is-5">どんな人がこの記事を読むべきか</h2>
 
-
-
-
-<br>
-  <figure class="image is-180x180 container">
-    <img
-      class="is-rounded"
-      src="https://e205723.github.io/images/logo.jpg"
-      alt="hugo-theme-iris logo"
-      decoding="async"
-      loading="lazy"
-    />
-  </figure>
-<br>
-
-
-<h3 id="自分について" class="title is-5">自分について</h3>
-
-<p>語学留学のためにカナダで高校を卒業するまで３年間滞在していました。日本へ帰国した後は大学に入らず東京で働き、後にそこで天職となるであろうものを見つけました、コンピュータプログラミングです。今現在、琉球大学で情報科学を学んでいます。</p>
-
-<h3 id="興味--僕ができること" class="title is-5">興味 / 僕ができること</h3>
-
-<p>英語が喋れたり、そこそこ書けます。ニューラルネットワークの仕組みと実装についての知識があります。システム管理について勉強したいと思っております。</p>
-
-</section><section class="section"><h2 class="title is-3" id="links" class="title is-5">Links</h2>
-
-
-<h3 id="internal" class="title is-5">Internal</h3>
-
-<div class="buttons">
-  
-
-<a class="button normal-link" href="./diary/">日記</a>
-
-  
-
-<a class="button normal-link" href="./study/">勉強</a>
-
-  
-
-<a class="button normal-link" href="./memorandum/">忘備録</a>
+<p>この記事の対象は以下の条件に当てはまる人です。</p>
+<div class="content">
+  <ul>
+<li>インサートモードで文字を入力することぐらいしかVimを活用できていない</li>
+<li><code>:q</code>, <code>:qw</code>くらいしかコマンドを知らない</li>
+<li>Vimがなぜ人気なのかわからない人</li>
+</ul>
 
 </div>
 
-<h3 id="external" class="title is-5">External</h3>
-
-<div class="buttons">
-  
-
-<a class="button normal-link" href="https://twitter.com/rienNeVaPlusOne">Main Twitter</a>
+<p>または、</p>
+<div class="content">
+  <ul>
+<li>備忘録的なのが欲しい方</li>
+<li>ちょくちょくノーマルモードのコマンドを忘れてしまう方</li>
+</ul>
 
 </div>
-<!-- Internal References -->
-<!-- External References -->
+
+<p>という感じです。</p>
+
+</section><section class="section"><h2 class="title is-3" id="vimの良さを知ろう" class="title is-5">Vimの良さを知ろう</h2>
+
+<p>Vimの素晴らしさはなんと言っても、「起動が速いこと」と「モード」が便利すぎることです。</p>
+
+<h3 id="どれくらい速いか" class="title is-5">どれくらい速いか</h3>
+
+<pre><code>vim --startuptime time.txt
+</code></pre><p>これをコマンドで実行してみてください。</p>
+<p>vimが開きます。何も書かれていませんが、<code>:q</code>で抜けて</p>
+<pre><code>less time.txt
+</code></pre><p>上記のコマンドを実行すると</p>
+<p>vimの起動までにかかる時間(msec)が記述されているはずです。</p>
+<p>私の場合は<code>20.219msec</code>で、秒にすると<code>0.020219sec</code>でした。</p>
+<p>数あるテキストエディタの起動時間では、これはかなり速い方です。</p>
+
+<h3 id="モードとは何か" class="title is-5">モードとは何か</h3>
+
+<p>初めてVimに触れたとき、Vimが開かれた直後に文字を入力しようとしても「何も入力されない!」ってなったことありませんか?</p>
+<p>これは単に、モードがインサートモードになっていないからなんですよね。</p>
+<p>一般的なIDEに慣れ親しんでいる人は不便に感じるかもしれませんが、このモードって概念がとても優れているんですよ。</p>
+<p>Vimのモードを大まかに羅列すると「ノーマルモード」、「コマンドラインモード」、「インサートモード」、「ビジュアルモード」、「ターミナルモード」に分類することができます。</p>
+
+
+<table class="table is-striped is-hoverable">
+<thead>
+<tr>
+<th>モード</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ノーマルモード</td>
+<td>カーソル移動, モード変更, コマンド</td>
+</tr>
+<tr>
+<td>コマンドモード</td>
+<td>コマンド</td>
+</tr>
+<tr>
+<td>インサートモード</td>
+<td>文字の入力</td>
+</tr>
+<tr>
+<td>ビジュアルモード</td>
+<td>文字の選択</td>
+</tr>
+<tr>
+<td>ターミナルモード</td>
+<td>ターミナル操作</td>
+</tr>
+</tbody>
+</table>
+
+
+
+</section><section class="section"><h2 class="title is-3" id="ノーマルモード" class="title is-5">ノーマルモード</h2>
+
+
+<h3 id="ノーマルモードのコマンドについて" class="title is-5">ノーマルモードのコマンドについて</h3>
+
+<p>Vimはコマンドを駆使することでテキストの編集をすばやく行うことができます。よって、沢山のコマンドやそれらの組み合わせを勉強することで、Vimの作業効率を図ることができます。</p>
+<p>ノーマルモードのコマンドを使うに当たって、あらかじめ知っておくと便利なことを紹介します。</p>
+<p><code>&lt;数字&gt;</code> + <code>&lt;コマンド&gt;</code>と行った形式でコマンドを入力すると、入力された<code>&lt;コマンド&gt;</code>が<code>&lt;数字&gt;</code>分行われます。</p>
+<p>また、<code>.</code>(ドット)と入力するだけで前に実行されたコマンドや処理を現在のカーソル上で再実行してくれます。これはインサートモードで行った処理も再実行してくれるので、このコマンドはかなり重宝します。</p>
+<p>では、早速コマンドを覚えていきましょう。</p>
+
+<h3 id="まずはモーションコマンドから" class="title is-5">まずはモーションコマンドから</h3>
+
+<p>VimはIDEのようにマウスでカーソルの位置をしたりできないので、初心者の方はとりあえず十字キーでカーソル移動をしてしまうことがあると思います。しかしながら、カーソル移動をするとき、Vimmerの前で十字キーを使ってはいけません。彼らは怒ってしまいます。</p>
+
+<h3 id="hjklで移動しよう" class="title is-5"><code>h</code>,<code>j</code>,<code>k</code>,<code>l</code>で移動しよう</h3>
+
+<p>「なら、Vimmerに怒られないために、どうやってカーソル移動をすればいいんだ！」ってなる初心者がいるかも知れません。安心してください、<code>h</code>,<code>j</code>,<code>k</code>,<code>l</code>で移動すればいいのです。</p>
+
+
+<table class="table is-striped is-hoverable">
+<thead>
+<tr>
+<th>コマンド</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h</td>
+<td>左へ1つカーソルを移動</td>
+</tr>
+<tr>
+<td>j</td>
+<td>下へ1つカーソルを移動</td>
+</tr>
+<tr>
+<td>k</td>
+<td>上へ1つカーソルを移動</td>
+</tr>
+<tr>
+<td>l</td>
+<td>右へ1つカーソルを移動</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>複数回移動したいなら、始めに数字を添えるといいです。</p>
+<p><code>&lt;数字&gt;</code> + <code>&lt;コマンド&gt;</code></p>
+<p>具体例で説明します、</p>
+<hr>
+<p><code>10</code> + <code>j</code></p>
+<p>これは「<code>10</code>回<code>j</code>を入力」 = 「<code>10</code>回下へカーソルを移動する」ということになります。</p>
+<hr>
+
+<h3 id="1つだけ移動だけじゃ不便それならwebを覚えよう" class="title is-5">1つだけ移動だけじゃ不便?それなら<code>w</code>,<code>e</code>,<code>b</code>を覚えよう</h3>
+
+<p>「1文字だけでは素早い作業ができない!」って感じるかも知れません、そんな時は単語単位でカーソルを移動してくれるコマンドを使いましょう。</p>
+
+
+<table class="table is-striped is-hoverable">
+<thead>
+<tr>
+<th>コマンド</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>w</td>
+<td>次の単語へカーソルを移動</td>
+</tr>
+<tr>
+<td>e</td>
+<td>単語の最後の文字にカーソルを移動</td>
+</tr>
+<tr>
+<td>b</td>
+<td>前の単語へカーソルを移動</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<h3 id="もっとモーションコマンドを知りたい貪欲な人へ" class="title is-5">もっとモーションコマンドを知りたい貪欲な人へ</h3>
+
+<p>応用的なモーションコマンドを紹介します。</p>
+<p>中には行数に関するモーションコマンドが含まれますが、</p>
+<pre><code>:set number
+</code></pre><p>または</p>
+<pre><code>:set nu
+</code></pre><p>で行数を表示することができます。</p>
+<p>なお、行数の表示が鬱陶しい場合、</p>
+<pre><code>:set nonumber
+</code></pre><p>または</p>
+<pre><code>:set nonu
+</code></pre><p>で行数の表示をオフにすることができます。</p>
+
+
+<table class="table is-striped is-hoverable">
+<thead>
+<tr>
+<th>コマンド</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 または ^</td>
+<td>行の先頭へカーソルを移動</td>
+</tr>
+<tr>
+<td>$</td>
+<td>行の最後へカーソルを移動</td>
+</tr>
+<tr>
+<td>f + &lt;任意の文字&gt;(1文字だけ)</td>
+<td>現在のカーソルの位置からfの後に打った文字を同じ行の中から探して最初に見つけたところにカーソルを移動</td>
+</tr>
+<tr>
+<td>t + &lt;任意の文字&gt;(1文字だけ)</td>
+<td>現在のカーソルの位置からfの後に打った文字を同じ行の中から探して最初に見つけたところの1個の文字にカーソルを移動</td>
+</tr>
+<tr>
+<td>gg</td>
+<td>ファイルの先頭へカーソルを移動</td>
+</tr>
+<tr>
+<td>G (Shift + g)</td>
+<td>ファイルの最後へカーソルを移動</td>
+</tr>
+<tr>
+<td>&lt;数字&gt; + G</td>
+<td>&lt;数字&gt;行目へカーソルを移動</td>
+</tr>
+<tr>
+<td>&lt;数字&gt; + Enter</td>
+<td>現在のカーソルの位置からあと&lt;数字&gt;行目進んだ場所へカーソルを移動</td>
+</tr>
+<tr>
+<td>H</td>
+<td>ウィンドウ内の上にカーソルを移動</td>
+</tr>
+<tr>
+<td>M</td>
+<td>ウィンドウ内の中にカーソルを移動</td>
+</tr>
+<tr>
+<td>L</td>
+<td>ウィンドウ内の下にカーソルを移動</td>
+</tr>
+<tr>
+<td>%</td>
+<td>()、{}、[]などの括弧の片方の上にカーソルを置いて実行すると、対応する一方の括弧へカーソルを移動する</td>
+</tr>
+<tr>
+<td>Ctrl + o</td>
+<td>古いカーソル位置に戻る</td>
+</tr>
+<tr>
+<td>Ctrl + i</td>
+<td>新しいカーソル位置に進む</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><code>f + &lt;任意の文字&gt;</code>に関して、<code>f</code>のあとに入力した<code>&lt;任意の文字&gt;</code>が現在の文に複数存在している場合、コマンド実行後、<code>;</code>を押して次の候補の位置へカーソルを移動、<code>,</code>で前の候補の位置へカーソルを移動することができます。</p>
+<p>また<code>t + &lt;任意の文字&gt;</code>に関しても同じ操作が可能です。</p>
+
+<h3 id="スクロール操作に関するコマンド" class="title is-5">スクロール操作に関するコマンド</h3>
+
+<p>続いてスクロール操作に関するコマンドを学びましょう。</p>
+
+
+<table class="table is-striped is-hoverable">
+<thead>
+<tr>
+<th>コマンド</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl + e</td>
+<td>1行スクールダウン</td>
+</tr>
+<tr>
+<td>Ctrl + y</td>
+<td>1行スクロールアップ</td>
+</tr>
+<tr>
+<td>Ctrl + d</td>
+<td>半画面スクロールダウン</td>
+</tr>
+<tr>
+<td>Ctrl + u</td>
+<td>半画面スクロールアップ</td>
+</tr>
+<tr>
+<td>Ctrl + f</td>
+<td>1画面スクロールダウン</td>
+</tr>
+<tr>
+<td>Ctrl + b</td>
+<td>1画面スクロールアップ</td>
+</tr>
+<tr>
+<td>z + Enter または z + t</td>
+<td>現在のカーソルが画面の1番上になるようにスクロール</td>
+</tr>
+<tr>
+<td>z + .</td>
+<td>現在のカーソルが画面の中央になるようにスクロール</td>
+</tr>
+<tr>
+<td>z + -</td>
+<td>現在のカーソルが画面の1番下になるようにスクロール</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<h3 id="オペレータコマンドも必須" class="title is-5">オペレータコマンドも必須</h3>
+
+<p>モーションコマンドを覚えたらオペレータコマンドも覚えましょう。以下の4つのオペレータコマンドは<code>&lt;オペレーションコマンド&gt;</code> + <code>&lt;モーションコマンド&gt;</code>という風に組み合わせることで、使うことができます。</p>
+
+
+<table class="table is-striped is-hoverable">
+<thead>
+<tr>
+<th>コマンド</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>y</td>
+<td>ヤンク(コピーのこと)</td>
+</tr>
+<tr>
+<td>d</td>
+<td>切り取り</td>
+</tr>
+<tr>
+<td>c</td>
+<td>変更</td>
+</tr>
+<tr>
+<td>g</td>
+<td>カーソル移動</td>
+</tr>
+</tbody>
+</table>
+
+
+<p><code>g</code>に関して、<code>g;</code>で「直前に変更した位置にカーソルを移動」という処理になり再び<code>g;</code>と入力することで変更リストを遡ることができます。また、<code>g,</code>では「遡った変更リストを逆順に進め, カーソルを移動をする」という処理になり、これも再び<code>g,</code>と入力することで変更リストを逆順に進めることができます。</p>
+<p>オペレータコマンドとモーションコマンドの組み合わせの仕方の例を紹介します。</p>
+<hr>
+<p><code>y</code>(ヤンク) + <code>2</code>(2回) + <code>l</code>(右へカーソルを移動)</p>
+<p>これは「現在のカーソルから2回右へカーソルを移動した位置までの範囲をヤンクする」という意味になります。」</p>
+<hr>
+<p><code>d</code>(切り取り) + <code>3</code>(3回) + <code>e</code>(単語の最後へカーソルを移動)</p>
+<p>これは「現在のカーソルが乗っている単語を含む、現在カーソル以降の3単語を切り取りする」という意味になります。</p>
+<hr>
+
+<h3 id="色々なコマンド" class="title is-5">色々なコマンド</h3>
+
+<p>他にも色々なコマンドが存在します。</p>
+
+
+<table class="table is-striped is-hoverable">
+<thead>
+<tr>
+<th>コマンド</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>yy</td>
+<td>1行をヤンク(コピー)</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>現在のカーソルから行末までヤンク(コピー)</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>1行を切り取り</td>
+</tr>
+<tr>
+<td>D</td>
+<td>現在のカーソルから行末まで切り取り</td>
+</tr>
+<tr>
+<td>p</td>
+<td>現在のカーソルの後にプット(ペースト)</td>
+</tr>
+<tr>
+<td>P</td>
+<td>現在のカーソルの前にプット(ペースト)</td>
+</tr>
+<tr>
+<td>u</td>
+<td>変更を1個戻す</td>
+</tr>
+<tr>
+<td>U</td>
+<td>行の中の最近の変更を全て戻す</td>
+</tr>
+<tr>
+<td>*</td>
+<td>カーソル下の単語を下方向に検索</td>
+</tr>
+<tr>
+<td>#</td>
+<td>カーソル下の単語を上方向に検索</td>
+</tr>
+<tr>
+<td>Ctrl + r</td>
+<td>戻された変更をやり直す(redoする)</td>
+</tr>
+<tr>
+<td>Ctrl + z</td>
+<td>Vimを一時停止してターミナルに戻る、ターミナルでfgコマンドと叩いて再開</td>
+</tr>
+<tr>
+<td>ZZ</td>
+<td>保存して終了(:wqと同じ)</td>
+</tr>
+</tbody>
+</table>
+
+
 
 </section>
 
+  <section class="section">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugothemeiris" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
 
           </div>
         </div>

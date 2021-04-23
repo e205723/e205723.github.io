@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Memorandum on rienNeVaPlusのブログ</title>
+    <link>https://e205723.github.io/memorandum/</link>
+    <description>Recent content in Memorandum on rienNeVaPlusのブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 17 Apr 2021 21:38:25 +0900</lastBuildDate><atom:link href="https://e205723.github.io/memorandum/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vimのノーマルモードのコマンド</title>
+      <link>https://e205723.github.io/memorandum/vim_normal_mode/</link>
+      <pubDate>Sat, 17 Apr 2021 21:38:25 +0900</pubDate>
+      
+      <guid>https://e205723.github.io/memorandum/vim_normal_mode/</guid>
+      <description>どんな人がこの記事を読むべきか この記事の対象は以下の条件に当てはまる人です。
+ インサートモードで文字を入力することぐらいしかVimを活用できていない :q, :qwくらいしかコマンドを知らない Vimがなぜ人気なのかわからない人   または、
+ 備忘録的なのが欲しい方 ちょくちょくノーマルモードのコマンドを忘れてしまう方   という感じです。
+Vimの良さを知ろう Vimの素晴らしさはなんと言っても、「起動が速いこと」と「モード」が便利すぎることです。
+どれくらい速いか vim --startuptime time.txt これをコマンドで実行してみてください。
+vimが開きます。何も書かれていませんが、:qで抜けて
+less time.txt 上記のコマンドを実行すると
+vimの起動までにかかる時間(msec)が記述されているはずです。
+私の場合は20.219msecで、秒にすると0.020219secでした。
+数あるテキストエディタの起動時間では、これはかなり速い方です。
+モードとは何か 初めてVimに触れたとき、Vimが開かれた直後に文字を入力しようとしても「何も入力されない!」ってなったことありませんか?
+これは単に、モードがインサートモードになっていないからなんですよね。
+一般的なIDEに慣れ親しんでいる人は不便に感じるかもしれませんが、このモードって概念がとても優れているんですよ。
+Vimのモードを大まかに羅列すると「ノーマルモード」、「コマンドラインモード」、「インサートモード」、「ビジュアルモード」、「ターミナルモード」に分類することができます。
+  モード 目的     ノーマルモード カーソル移動, モード変更, コマンド   コマンドモード コマンド   インサートモード 文字の入力   ビジュアルモード 文字の選択   ターミナルモード ターミナル操作    ノーマルモード ノーマルモードのコマンドについて Vimはコマンドを駆使することでテキストの編集をすばやく行うことができます。よって、沢山のコマンドやそれらの組み合わせを勉強することで、Vimの作業効率を図ることができます。</description>
+    </item>
+    
+  </channel>
+</rss>
