@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://e205723.github.io/memorandum/</loc>
-    <lastmod>2021-04-23T23:03:40+09:00</lastmod>
+    <loc>https://e205723.github.io/diary/metamorphosis/</loc>
+    <lastmod>2021-04-23T23:29:02+09:00</lastmod>
   </url>
   
   <url>
@@ -60,6 +60,11 @@
                 hreflang="ja"
                 href="https://e205723.github.io/study/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://e205723.github.io/memorandum/</loc>
+    <lastmod>2019-09-30T08:00:00+00:00</lastmod>
   </url>
   
   <url>
