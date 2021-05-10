@@ -3,13 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://e205723.github.io/study/twitterbot/</loc>
+    <lastmod>2021-05-10T00:08:35+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://e205723.github.io/study_os/day0/</loc>
-    <lastmod>2021-04-25T00:17:57+09:00</lastmod>
+    <lastmod>2021-04-25T01:14:07+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://e205723.github.io/study_os/</loc>
-    <lastmod>2021-04-25T00:14:07+09:00</lastmod>
+    <lastmod>2021-04-25T01:14:07+09:00</lastmod>
   </url>
   
   <url>
@@ -28,23 +33,18 @@
   </url>
   
   <url>
-    <loc>https://e205723.github.io/diary/ugly_love_affair_and_love_marriage/</loc>
-    <lastmod>2021-03-24T17:42:10+09:00</lastmod>
+    <loc>https://e205723.github.io/study_machine_learning/data_science_for_money_making/</loc>
+    <lastmod>2020-12-24T08:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://e205723.github.io/study/data_science_for_money_making/</loc>
-    <lastmod>2021-04-10T19:17:31+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://e205723.github.io/study/how_to_make_neural_network/</loc>
-    <lastmod>2021-04-10T19:17:31+09:00</lastmod>
+    <loc>https://e205723.github.io/study_machine_learning/how_to_make_neural_network/</loc>
+    <lastmod>2020-11-29T08:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://e205723.github.io/</loc>
-    <lastmod>2021-04-23T23:03:40+09:00</lastmod>
+    <lastmod>2021-04-25T01:14:07+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -90,6 +90,11 @@
                 hreflang="ja"
                 href="https://e205723.github.io/diary/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://e205723.github.io/study_machine_learning/</loc>
+    <lastmod>2019-09-30T08:00:00+00:00</lastmod>
   </url>
   
 </urlset>

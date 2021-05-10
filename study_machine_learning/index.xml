@@ -1,112 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on rienNeVaPlusのブログ</title>
-    <link>https://e205723.github.io/</link>
-    <description>Recent content in Home on rienNeVaPlusのブログ</description>
+    <title>機械学習の勉強 on rienNeVaPlusのブログ</title>
+    <link>https://e205723.github.io/study_machine_learning/</link>
+    <description>Recent content in 機械学習の勉強 on rienNeVaPlusのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 03 Sep 2020 23:00:00 +0000</lastBuildDate><atom:link href="https://e205723.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Twitterのbotを作る&#43;nohupコマンドでdaemon「っぽく」させる</title>
-      <link>https://e205723.github.io/study/twitterbot/</link>
-      <pubDate>Mon, 10 May 2021 00:08:35 +0900</pubDate>
-      
-      <guid>https://e205723.github.io/study/twitterbot/</guid>
-      <description>Twitterのbotを作りたい B1の頃から、Twitterのbotやりたいなぁ&amp;hellip;。って思ってて、最近ちょっと暇だったので作ってみました。
-未来、賢くなったら、「馬鹿だなぁ自分」って感じでこの記事を振り返りたい。未来、後輩から多少尊敬されるようになったら、後輩達にこの記事を書いた馬鹿な先輩の足跡を見て多少安心してもらえると嬉しいどす。
-そもそもTwitterbotなんか作って何を学びたいの? 結果から言うと全部逃げの選択を取ってしまって、なんか動くけど&amp;hellip;うん、君もっと頑張ろうよ&amp;hellip;。ってなる感じのプロダクトになりました。特にセキュリティ関連の脅威がなくても、まあ動くなら正義じゃん?ってな感じで始めるしかない。とりあえず作る過程で何を学びたいか列挙する。
- API  Applicationが別のProgram(ing)を使うためのInterface(仲介役)みたいな いや、こんな説明だとOSの授業で先生に怒られるのは必至 API key(API使えるようになるための暗号)ってのが必要になるらしい   Daemon  デェ↑モンって読みます。紀元前98038年に爆誕した(おい) メインメモリ上で常駐(ずっと稼働してる)プログラムのこと バッググラウンドプロセスの一種     まあ、つまりTwitterのAPIの機能(ツイートをゲットしたり、ツイートを送信したり)を使うプログラムを、daemon化して、常駐化、つまりずっと稼働している状態にしたいっていう野望がありました。
-では早速API keyをゲットしよう Twitter APIを使う準備をしましょう。
-必要なもの
- 携帯番号、メールアドレスと連携しているTwitterアカウント サーバ(学科VMとか)   ウェブ上でAPI keyを申請する API keyをゲットするために色々申請しなければなりません、作業は1時間もかからないと思います。
-このサイトに飛んでください  ↑ 僕は趣味でbotを作るのでHobbyistを選びました
-↑ 作るのはbotなのでMaking a botを選択
-↑ 適当に情報を埋めていく
-↑ 英語で「TwitterのAPIやデータをどのように使うつもりなのか」を英語で記述して説明する。コピペはダメかも。
-↑ ここも多少英語で書き書き
-↑ 情報の確認的な
-↑ ポリシー的なのを読んでチェック、なんかあったら自己責任でお願いします
-↑ Twitterアカウントと連携しているメールアドレスへ確認メールが送られる
-↑ メールの受信ボックスへ行って、確認メールを見る。Confirm your emailをクリック
-↑ ここのサイト  から上のようなページを探す、そしてCreate Projectをクリック
-↑ 適当にプロジェクト名を記入</description>
-    </item>
-    
-    <item>
-      <title>OS自作入門0日目</title>
-      <link>https://e205723.github.io/study_os/day0/</link>
-      <pubDate>Sun, 25 Apr 2021 00:17:57 +0900</pubDate>
-      
-      <guid>https://e205723.github.io/study_os/day0/</guid>
-      <description>MacでOSを自作する 「30日でできる! OS自作入門  」という本を使って自作OSの勉強をしようかと思います。本来この本はWindows環境向けなのですが、macOS用の環境を作ってしかも公開してくれている方がいるので、その方のレポジトリ  を使ってこの本を読むにあたっての環境を構築したいと思います。
-自分のMacBookの環境 $sw_vers ProductName:	macOS ProductVersion:	11.2.2 BuildVersion:	20D80  手順に従って環境を構築します レポジトリのクローン
-git clone https://github.com/tatsumack/30nichideosjisaku qemu  のinstall
-brew install qemu qemuのバージョン確認
-$qemu-system-i386 -version QEMU emulator version 5.2.0 Copyright (c) 2003-2020 Fabrice Bellard and the QEMU Project developers $ cd 30nichideosjisaku/01_day/helloos0/ $ make run 動作確認
-$cd 30nichideosjisaku/01_day/helloos0/ $make run このようなWindowが出れば動作確認成功です</description>
-    </item>
-    
-    <item>
-      <title>プシュケー</title>
-      <link>https://e205723.github.io/diary/metamorphosis/</link>
-      <pubDate>Fri, 23 Apr 2021 23:29:02 +0900</pubDate>
-      
-      <guid>https://e205723.github.io/diary/metamorphosis/</guid>
-      <description> 蛹から蝶へ 蝶は幼虫と成虫とで体の構造が全く違います。
-幼虫は餌を見つけるためのセンサーと、それを消化して栄養として備蓄していくための消化器官を持ちます。
-成虫は、6本の脚と、大きい翅を持ち、高い運動能力を生かして交尾の相手を探します。
-幼虫が成虫へ変態するとき、蛹になり、蛹の中で特殊な酵素を出して体のほとんどの組織を壊し、壊した組織を再利用可能な栄養にし、それと幼虫の頃から蓄えていた栄養を用いて「成虫原基」と呼ばれる成虫の諸器官の元を発達させて体の再構築します。
-ちなみに、蛹の中で、酵素を使って体の組織を壊したあとは、蛹の中身はどろどろのクリーム状になっているらしいです。
-故に、中身が乱れやすく、少しでも衝撃を蛹に加えてしまうと、その衝撃を与えられた虫は蛹の姿のまま死ぬこともあるようです。
-外から見ると変化がないように見えて、内側で劇的な変化をし続けるという点において、人の心は蝶の蛹と似たところがありますね。
-蛹のまま死んでいたかも知れなかった 自分のことについて話します。
-今後どのように、変化して生きていくのかわからない、まだ何も知恵も、社会を生きる体力も、ほとんど何もない状態で、ひたすら外からの衝撃に耐えるという蛹のような状態が思春期が始まったころから今まで続いております。
-血眼になって人の粗を探し、それを見つけて指摘することに生きがいを見出す人、たまたま上の立場になっただけで執拗にハラスメントをする人など、大学に入るまでは、こういった残念な人種に遭遇してしまうことが多かったと思います。
-そういった環境の中で、未来の自分を作るための成虫原基(人格のロールモデル)を探すのにはかなり苦労しました。
-今でも中高の頃から連絡を取り続ける人、大学で自分に親しくしてくれる先生、先輩や同期は、非常に良い形で今の自分のロールモデルに影響を与えてくれています。
-そして、こういう人たちがいなかったら僕はとっくに蛹の中で絶命していたと思います。
-ただ、「ありがとう」という言葉を送りたい。
-psychoの語源 psycho-という「精神の」、「心理の」という意味を添える接頭辞が存在します。
-psychoは元々、「息」を表すpsyche(古代ギリシア語でΨυχή)という言葉から来ています。
-そして、psycheは「息」から転じて「命、心、魂」を意味するようになりました。
-また、「蝶」という虫は古代ギリシアで、「命、心、魂」の比喩としてよく扱われていたため、psycheは「蝶」という意味も含むようになりました。
-「魂」と「蝶」を意味するpsyche、日本語で「プシュケー」
-ご精読感謝 </description>
-    </item>
-    
-    <item>
-      <title>Vimのノーマルモードのコマンド</title>
-      <link>https://e205723.github.io/memorandum/vim_normal_mode/</link>
-      <pubDate>Sat, 17 Apr 2021 21:38:25 +0900</pubDate>
-      
-      <guid>https://e205723.github.io/memorandum/vim_normal_mode/</guid>
-      <description>どんな人がこの記事を読むべきか この記事の対象は以下の条件に当てはまる人です。
- インサートモードで文字を入力することぐらいしかVimを活用できていない :q, :qwくらいしかコマンドを知らない Vimがなぜ人気なのかわからない人   または、
- 備忘録的なのが欲しい方 ちょくちょくノーマルモードのコマンドを忘れてしまう方   という感じです。
-Vimの良さを知ろう Vimの素晴らしさはなんと言っても、「起動が速いこと」と「モード」が便利すぎることです。
-どれくらい速いか vim --startuptime time.txt これをコマンドで実行してみてください。
-vimが開きます。何も書かれていませんが、:qで抜けて
-less time.txt 上記のコマンドを実行すると
-vimの起動までにかかる時間(msec)が記述されているはずです。
-私の場合は20.219msecで、秒にすると0.020219secでした。
-数あるテキストエディタの起動時間では、これはかなり速い方です。
-モードとは何か 初めてVimに触れたとき、Vimが開かれた直後に文字を入力しようとしても「何も入力されない!」ってなったことありませんか?
-これは単に、モードがインサートモードになっていないからなんですよね。
-一般的なIDEに慣れ親しんでいる人は不便に感じるかもしれませんが、このモードって概念がとても優れているんですよ。
-Vimのモードを大まかに羅列すると「ノーマルモード」、「コマンドラインモード」、「インサートモード」、「ビジュアルモード」、「ターミナルモード」に分類することができます。
-  モード 目的     ノーマルモード カーソル移動, モード変更, コマンド   コマンドモード コマンド   インサートモード 文字の入力   ビジュアルモード 文字の選択   ターミナルモード ターミナル操作    ノーマルモード ノーマルモードのコマンドについて Vimはコマンドを駆使することでテキストの編集をすばやく行うことができます。よって、沢山のコマンドやそれらの組み合わせを勉強することで、Vimの作業効率を図ることができます。</description>
-    </item>
-    
-    <item>
-      <title>自己紹介/PR</title>
-      <link>https://e205723.github.io/diary/my_pr/</link>
-      <pubDate>Sat, 10 Apr 2021 16:15:17 +0900</pubDate>
-      
-      <guid>https://e205723.github.io/diary/my_pr/</guid>
-      <description>テーブルで自己紹介   Key Value     氏名 佐野巧曜 (Sano Yoshiaki)   高校 カナダ, ブリテッシュコロンビア州のマウントダグラス高校   大学 / 学部 / コース / 学年 琉球大学 / 工学部 / 知能情報コース / B2   読み書き話す聞くなどができる自然言語 日本語（ネイティブスピーカー), 英語(非ネイティブ)   GTEC LISTENING 191, READING 174 -&amp;gt; 交渉, プレゼンテーション, マネジメントなどの, ほぼどのような場面でも自信を持って英語を業務に使えるプロフェッショナルレベル相当   日常的に使うプログラミング言語 Python   触ったことがあるプログラミング言語 Ruby, C++, Java, Swift   枕頭の書 戦略的データサイエンス入門   今何してる 琉球大学の知能情報コースのネットワークやサーバ等を学生主体で運営保守する「システム管理チーム」で見習いをしています   苦手なこと/勉強したいこと インフラ周り, ネットワーク, セキュリティ, gitが全部初心者です   長所 「運がとにかくいい」, 「数は少ないが友人関係に恵まれている」, 「手を動かしてする勉強が好き」, 「性格が良い」   短所 「図々しい」, 「馴れ馴れしい」, 「座学が苦手」, 「性格が悪い」    製作物 ブログ B1の頃は, 琉大 Advent Calendar 2020  で「ニューラルネットワークの仕組みと実装の解説  」と「お金を稼ぐための機械学習  」という記事を書きました</description>
-    </item>
-    
+    <lastBuildDate>Mon, 30 Sep 2019 08:00:00 +0000</lastBuildDate><atom:link href="https://e205723.github.io/study_machine_learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>お金を稼ぐための機械学習</title>
       <link>https://e205723.github.io/study_machine_learning/data_science_for_money_making/</link>
