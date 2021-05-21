@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>機械学習の勉強 on rienNeVaPlusのブログ</title>
-    <link>https://e205723.github.io/study_machine_learning/</link>
-    <description>Recent content in 機械学習の勉強 on rienNeVaPlusのブログ</description>
+    <title>機械学習の勉強 on Yoshisaurのブログ</title>
+    <link>https://yoshisaur.net/study_machine_learning/</link>
+    <description>Recent content in 機械学習の勉強 on Yoshisaurのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 30 Sep 2019 08:00:00 +0000</lastBuildDate><atom:link href="https://e205723.github.io/study_machine_learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Sep 2019 08:00:00 +0000</lastBuildDate><atom:link href="https://yoshisaur.net/study_machine_learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>お金を稼ぐための機械学習</title>
-      <link>https://e205723.github.io/study_machine_learning/data_science_for_money_making/</link>
+      <link>https://yoshisaur.net/study_machine_learning/data_science_for_money_making/</link>
       <pubDate>Thu, 24 Dec 2020 08:00:00 +0000</pubDate>
       
-      <guid>https://e205723.github.io/study_machine_learning/data_science_for_money_making/</guid>
+      <guid>https://yoshisaur.net/study_machine_learning/data_science_for_money_making/</guid>
       <description>はじめに この記事ではお金を稼ぐための機械学習を学びます。株やFXなどの金融工学への応用は範囲外です。おもにビジネスに応用が効く技術のみ紹介しようと思います。この記事を書く際にあたってビジネスとかの話をしますが私はお金が好きなだけで意識は全く高くないです。
 そもそも、株やFXへの応用は難しいことを理解しよう 値動きの予測の不可能性を説くランダムウォーク理論、相場を変動させうる情報は瞬時にマーケットに広がってしまい利益を生むことができる隙がないとする効率的市場仮説など、機械学習の応用を阻む壁が多すぎます。まず、値動きが予測できるアルゴリズムが作れたらその優れた頭脳を別のことに使ったほうが有意義だと思います。そもそも、お金稼ぎのために投資を勉強しようとしている人は情弱か頭が残念な方です。レバレッジ1倍でS&amp;amp;P 500を毎月買い続けるかプログラミングか宅建の勉強してください。
 ビジネスへの応用 ゼロサムゲームの株やFXとは違い、ビジネスまたはマーケティングにおいては、ベンダーとクライアントが双方得する方向を目指せることもあるのでそちらのほうに機械学習の応用を考えるほうが良いと考えられます。まずはDDD(データ主導による意思決定)、それから広告への応用、利益曲線、そして最後にKPIと呼ばれる指標へのデータサイエンスの応用について話をしようと思います。よろしくおねがいします。
@@ -38,10 +38,10 @@ DMの商品を買ってくれる人を1、買わない人を0として判別す�
     
     <item>
       <title>ニューラルネットワークの仕組みの解説と実装</title>
-      <link>https://e205723.github.io/study_machine_learning/how_to_make_neural_network/</link>
+      <link>https://yoshisaur.net/study_machine_learning/how_to_make_neural_network/</link>
       <pubDate>Sun, 29 Nov 2020 08:00:00 +0000</pubDate>
       
-      <guid>https://e205723.github.io/study_machine_learning/how_to_make_neural_network/</guid>
+      <guid>https://yoshisaur.net/study_machine_learning/how_to_make_neural_network/</guid>
       <description>はじめに この記事ではニューラルネットワークの仕組みを説明して実装したコードを掲載しております。琉球大学の知能情報コースprogramming1で習う知識で実装しています。並列処理をするようには設計していません。 理解度を深めるために問題を各所に掲載しております。回答は最後の方へスクロールダウンすると見つけることができます。
 この記事を読むべき人  ニューラルネットワークの仕組みがわからないままTensorflowやPytorchなどの機械学習APIを使いたくない人 線形代数が苦手だけどニューラルネットワークに興味ある人(極力、図を使って説明しています)   脳のニューロンの仕組み 実際に脳に存在するニューロンの図 脳のニューロンはそのニューロンに集まる信号を一つづつ重み付け(信号を大きくしたり小さくしたりする)してその和が閾値(境目となる値)を超えると他のニューロンに信号を発火して、超えないと他のニューロンに信号を発火しない仕組みになっている。
 脳のニューロンの仕組み 脳のニューロンの振る舞いを形式的に表現すると以下のような図になる。

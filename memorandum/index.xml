@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>忘備録 on rienNeVaPlusのブログ</title>
-    <link>https://e205723.github.io/memorandum/</link>
-    <description>Recent content in 忘備録 on rienNeVaPlusのブログ</description>
+    <title>備忘録 on Yoshisaurのブログ</title>
+    <link>https://yoshisaur.net/memorandum/</link>
+    <description>Recent content in 備忘録 on Yoshisaurのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 30 Sep 2019 08:00:00 +0000</lastBuildDate><atom:link href="https://e205723.github.io/memorandum/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Sep 2019 08:00:00 +0000</lastBuildDate><atom:link href="https://yoshisaur.net/memorandum/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gitの基本</title>
+      <link>https://yoshisaur.net/memorandum/git/</link>
+      <pubDate>Sat, 22 May 2021 00:30:48 +0900</pubDate>
+      
+      <guid>https://yoshisaur.net/memorandum/git/</guid>
+      <description>なぜこれを書いているか 僕はGitあまり深くやっていないので、勉強用にこの記事を書いてます
+この記事の対象者  git add, git commit, git pushくらいしかやったことない人 ただぼんやりとしかGitしたことない人 mergeってなんぞや&amp;hellip;って人   注意 この記事の内容は「Githubありき」という感じです
+Linus Torvaldsさんごめんなさい
+登場するgitコマンド 基本的に引数は省力します
+  コマンド 操作     git init ディレクトリをGitで使う宣言   git add ファイル、フォルダをステージングエリアに置く   git status ステージングエリアにあるファイル、フォルダの確認   git diff --cashed ステージングエリアにあるファイルの前のバージョンとの変更点を表示   git commit ステージングエリアにあるファイル、フォルダをリポジトリに移動させてバージョンを確定する   git commit -m エディタを開かずにコミットメッセージを引数として書き、git commitを実行   git commit –amend 直前のコミットを修正する   git log コミットの履歴を表示   git log --oneline コミットのログを1行だけのコンパクトな形で表示する   git log -p commitしたときの前のバージョンとの差分(変更点)を表示する   git log --stat コミットごとに変更されたファイル名を列挙して表示する   git remote ローカルのリポジトリをリモートリポジトリに登録する   git config -l リモートリポジトリの場所を確認する   git push ローカルリポジトリのコミットをリモートリポジトリに反映させる   git reset 指定されたコミットのバージョンへ戻す   git reset --hard HEAD 直前のコミットへ戻る   git reset --hard HEAD^ 前々回のコミットへ戻る   git reset --hard ORIG_HEAD git resetによってキャンセルされたコミットへ戻る   git branch ブランチの一覧の表示   git branch &amp;lt;branch name&amp;gt; &amp;lt;branch name&amp;gt;という名前のbranchを作る   git branch -d 指定されたブランチを消す   git checkout 指定されたのブランチへ移動   git checkout -b 新しいブランチを作って移動する   git merge 現在のブランチへ指定されたブランチにあるファイル、フォルダを反映する    まずはGitで登場する領域から ここでステージングエリアを含む、4つの重要な領域について勉強しましょう</description>
+    </item>
+    
     <item>
       <title>Vimのノーマルモードのコマンド</title>
-      <link>https://e205723.github.io/memorandum/vim_normal_mode/</link>
+      <link>https://yoshisaur.net/memorandum/vim_normal_mode/</link>
       <pubDate>Sat, 17 Apr 2021 21:38:25 +0900</pubDate>
       
-      <guid>https://e205723.github.io/memorandum/vim_normal_mode/</guid>
+      <guid>https://yoshisaur.net/memorandum/vim_normal_mode/</guid>
       <description>どんな人がこの記事を読むべきか この記事の対象は以下の条件に当てはまる人です。
  インサートモードで文字を入力することぐらいしかVimを活用できていない :q, :qwくらいしかコマンドを知らない Vimがなぜ人気なのかわからない人   または、
  備忘録的なのが欲しい方 ちょくちょくノーマルモードのコマンドを忘れてしまう方   という感じです。

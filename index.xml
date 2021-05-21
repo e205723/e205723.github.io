@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on rienNeVaPlusのブログ</title>
-    <link>https://e205723.github.io/</link>
-    <description>Recent content in Home on rienNeVaPlusのブログ</description>
+    <title>Yoshisaur on Yoshisaurのブログ</title>
+    <link>https://yoshisaur.net/</link>
+    <description>Recent content in Yoshisaur on Yoshisaurのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 03 Sep 2020 23:00:00 +0000</lastBuildDate><atom:link href="https://e205723.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Sep 2020 23:00:00 +0000</lastBuildDate><atom:link href="https://yoshisaur.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gitの基本</title>
+      <link>https://yoshisaur.net/memorandum/git/</link>
+      <pubDate>Sat, 22 May 2021 00:30:48 +0900</pubDate>
+      
+      <guid>https://yoshisaur.net/memorandum/git/</guid>
+      <description>なぜこれを書いているか 僕はGitあまり深くやっていないので、勉強用にこの記事を書いてます
+この記事の対象者  git add, git commit, git pushくらいしかやったことない人 ただぼんやりとしかGitしたことない人 mergeってなんぞや&amp;hellip;って人   注意 この記事の内容は「Githubありき」という感じです
+Linus Torvaldsさんごめんなさい
+登場するgitコマンド 基本的に引数は省力します
+  コマンド 操作     git init ディレクトリをGitで使う宣言   git add ファイル、フォルダをステージングエリアに置く   git status ステージングエリアにあるファイル、フォルダの確認   git diff --cashed ステージングエリアにあるファイルの前のバージョンとの変更点を表示   git commit ステージングエリアにあるファイル、フォルダをリポジトリに移動させてバージョンを確定する   git commit -m エディタを開かずにコミットメッセージを引数として書き、git commitを実行   git commit –amend 直前のコミットを修正する   git log コミットの履歴を表示   git log --oneline コミットのログを1行だけのコンパクトな形で表示する   git log -p commitしたときの前のバージョンとの差分(変更点)を表示する   git log --stat コミットごとに変更されたファイル名を列挙して表示する   git remote ローカルのリポジトリをリモートリポジトリに登録する   git config -l リモートリポジトリの場所を確認する   git push ローカルリポジトリのコミットをリモートリポジトリに反映させる   git reset 指定されたコミットのバージョンへ戻す   git reset --hard HEAD 直前のコミットへ戻る   git reset --hard HEAD^ 前々回のコミットへ戻る   git reset --hard ORIG_HEAD git resetによってキャンセルされたコミットへ戻る   git branch ブランチの一覧の表示   git branch &amp;lt;branch name&amp;gt; &amp;lt;branch name&amp;gt;という名前のbranchを作る   git branch -d 指定されたブランチを消す   git checkout 指定されたのブランチへ移動   git checkout -b 新しいブランチを作って移動する   git merge 現在のブランチへ指定されたブランチにあるファイル、フォルダを反映する    まずはGitで登場する領域から ここでステージングエリアを含む、4つの重要な領域について勉強しましょう</description>
+    </item>
+    
     <item>
       <title>Twitterのbotを作る&#43;nohupコマンドでdaemon「っぽく」させる</title>
-      <link>https://e205723.github.io/study/twitterbot/</link>
+      <link>https://yoshisaur.net/study/twitterbot/</link>
       <pubDate>Mon, 10 May 2021 00:08:35 +0900</pubDate>
       
-      <guid>https://e205723.github.io/study/twitterbot/</guid>
+      <guid>https://yoshisaur.net/study/twitterbot/</guid>
       <description>Twitterのbotを作りたい B1の頃から、Twitterのbotやりたいなぁ&amp;hellip;。って思ってて、最近ちょっと暇だったので作ってみました。
 未来、賢くなったら、「馬鹿だなぁ自分」って感じでこの記事を振り返りたい。未来、後輩から多少尊敬されるようになったら、後輩達にこの記事を書いた馬鹿な先輩の足跡を見て多少安心してもらえると嬉しいどす。
 そもそもTwitterbotなんか作って何を学びたいの? 結果から言うと全部逃げの選択を取ってしまって、なんか動くけど&amp;hellip;うん、君もっと頑張ろうよ&amp;hellip;。ってなる感じのプロダクトになりました。特にセキュリティ関連の脅威がなくても、まあ動くなら正義じゃん?ってな感じで始めるしかない。とりあえず作る過程で何を学びたいか列挙する。
@@ -35,10 +48,10 @@
     
     <item>
       <title>OS自作入門0日目</title>
-      <link>https://e205723.github.io/study_os/day0/</link>
+      <link>https://yoshisaur.net/study_os/day0/</link>
       <pubDate>Sun, 25 Apr 2021 00:17:57 +0900</pubDate>
       
-      <guid>https://e205723.github.io/study_os/day0/</guid>
+      <guid>https://yoshisaur.net/study_os/day0/</guid>
       <description>MacでOSを自作する 「30日でできる! OS自作入門  」という本を使って自作OSの勉強をしようかと思います。本来この本はWindows環境向けなのですが、macOS用の環境を作ってしかも公開してくれている方がいるので、その方のレポジトリ  を使ってこの本を読むにあたっての環境を構築したいと思います。
 自分のMacBookの環境 $sw_vers ProductName:	macOS ProductVersion:	11.2.2 BuildVersion:	20D80  手順に従って環境を構築します レポジトリのクローン
 git clone https://github.com/tatsumack/30nichideosjisaku qemu  のinstall
@@ -49,10 +62,10 @@ $cd 30nichideosjisaku/01_day/helloos0/ $make run このようなWindowが出れ�
     
     <item>
       <title>プシュケー</title>
-      <link>https://e205723.github.io/diary/metamorphosis/</link>
+      <link>https://yoshisaur.net/diary/metamorphosis/</link>
       <pubDate>Fri, 23 Apr 2021 23:29:02 +0900</pubDate>
       
-      <guid>https://e205723.github.io/diary/metamorphosis/</guid>
+      <guid>https://yoshisaur.net/diary/metamorphosis/</guid>
       <description> 蛹から蝶へ 蝶は幼虫と成虫とで体の構造が全く違います。
 幼虫は餌を見つけるためのセンサーと、それを消化して栄養として備蓄していくための消化器官を持ちます。
 成虫は、6本の脚と、大きい翅を持ち、高い運動能力を生かして交尾の相手を探します。
@@ -77,10 +90,10 @@ psychoは元々、「息」を表すpsyche(古代ギリシア語でΨυχή)と�
     
     <item>
       <title>Vimのノーマルモードのコマンド</title>
-      <link>https://e205723.github.io/memorandum/vim_normal_mode/</link>
+      <link>https://yoshisaur.net/memorandum/vim_normal_mode/</link>
       <pubDate>Sat, 17 Apr 2021 21:38:25 +0900</pubDate>
       
-      <guid>https://e205723.github.io/memorandum/vim_normal_mode/</guid>
+      <guid>https://yoshisaur.net/memorandum/vim_normal_mode/</guid>
       <description>どんな人がこの記事を読むべきか この記事の対象は以下の条件に当てはまる人です。
  インサートモードで文字を入力することぐらいしかVimを活用できていない :q, :qwくらいしかコマンドを知らない Vimがなぜ人気なのかわからない人   または、
  備忘録的なのが欲しい方 ちょくちょくノーマルモードのコマンドを忘れてしまう方   という感じです。
@@ -100,19 +113,19 @@ Vimのモードを大まかに羅列すると「ノーマルモード」、「�
     
     <item>
       <title>自己紹介/PR</title>
-      <link>https://e205723.github.io/diary/my_pr/</link>
+      <link>https://yoshisaur.net/diary/my_pr/</link>
       <pubDate>Sat, 10 Apr 2021 16:15:17 +0900</pubDate>
       
-      <guid>https://e205723.github.io/diary/my_pr/</guid>
+      <guid>https://yoshisaur.net/diary/my_pr/</guid>
       <description>テーブルで自己紹介   Key Value     氏名 佐野巧曜 (Sano Yoshiaki)   高校 カナダ, ブリテッシュコロンビア州のマウントダグラス高校   大学 / 学部 / コース / 学年 琉球大学 / 工学部 / 知能情報コース / B2   読み書き話す聞くなどができる自然言語 日本語（ネイティブスピーカー), 英語(非ネイティブ)   GTEC LISTENING 191, READING 174 -&amp;gt; 交渉, プレゼンテーション, マネジメントなどの, ほぼどのような場面でも自信を持って英語を業務に使えるプロフェッショナルレベル相当   日常的に使うプログラミング言語 Python   触ったことがあるプログラミング言語 Ruby, C++, Java, Swift   枕頭の書 戦略的データサイエンス入門   今何してる 琉球大学の知能情報コースのネットワークやサーバ等を学生主体で運営保守する「システム管理チーム」で見習いをしています   苦手なこと/勉強したいこと インフラ周り, ネットワーク, セキュリティ, gitが全部初心者です   長所 「運がとにかくいい」, 「数は少ないが友人関係に恵まれている」, 「手を動かしてする勉強が好き」, 「性格が良い」   短所 「図々しい」, 「馴れ馴れしい」, 「座学が苦手」, 「性格が悪い」    製作物 ブログ B1の頃は, 琉大 Advent Calendar 2020  で「ニューラルネットワークの仕組みと実装の解説  」と「お金を稼ぐための機械学習  」という記事を書きました</description>
     </item>
     
     <item>
       <title>お金を稼ぐための機械学習</title>
-      <link>https://e205723.github.io/study_machine_learning/data_science_for_money_making/</link>
+      <link>https://yoshisaur.net/study_machine_learning/data_science_for_money_making/</link>
       <pubDate>Thu, 24 Dec 2020 08:00:00 +0000</pubDate>
       
-      <guid>https://e205723.github.io/study_machine_learning/data_science_for_money_making/</guid>
+      <guid>https://yoshisaur.net/study_machine_learning/data_science_for_money_making/</guid>
       <description>はじめに この記事ではお金を稼ぐための機械学習を学びます。株やFXなどの金融工学への応用は範囲外です。おもにビジネスに応用が効く技術のみ紹介しようと思います。この記事を書く際にあたってビジネスとかの話をしますが私はお金が好きなだけで意識は全く高くないです。
 そもそも、株やFXへの応用は難しいことを理解しよう 値動きの予測の不可能性を説くランダムウォーク理論、相場を変動させうる情報は瞬時にマーケットに広がってしまい利益を生むことができる隙がないとする効率的市場仮説など、機械学習の応用を阻む壁が多すぎます。まず、値動きが予測できるアルゴリズムが作れたらその優れた頭脳を別のことに使ったほうが有意義だと思います。そもそも、お金稼ぎのために投資を勉強しようとしている人は情弱か頭が残念な方です。レバレッジ1倍でS&amp;amp;P 500を毎月買い続けるかプログラミングか宅建の勉強してください。
 ビジネスへの応用 ゼロサムゲームの株やFXとは違い、ビジネスまたはマーケティングにおいては、ベンダーとクライアントが双方得する方向を目指せることもあるのでそちらのほうに機械学習の応用を考えるほうが良いと考えられます。まずはDDD(データ主導による意思決定)、それから広告への応用、利益曲線、そして最後にKPIと呼ばれる指標へのデータサイエンスの応用について話をしようと思います。よろしくおねがいします。
@@ -138,10 +151,10 @@ DMの商品を買ってくれる人を1、買わない人を0として判別す�
     
     <item>
       <title>ニューラルネットワークの仕組みの解説と実装</title>
-      <link>https://e205723.github.io/study_machine_learning/how_to_make_neural_network/</link>
+      <link>https://yoshisaur.net/study_machine_learning/how_to_make_neural_network/</link>
       <pubDate>Sun, 29 Nov 2020 08:00:00 +0000</pubDate>
       
-      <guid>https://e205723.github.io/study_machine_learning/how_to_make_neural_network/</guid>
+      <guid>https://yoshisaur.net/study_machine_learning/how_to_make_neural_network/</guid>
       <description>はじめに この記事ではニューラルネットワークの仕組みを説明して実装したコードを掲載しております。琉球大学の知能情報コースprogramming1で習う知識で実装しています。並列処理をするようには設計していません。 理解度を深めるために問題を各所に掲載しております。回答は最後の方へスクロールダウンすると見つけることができます。
 この記事を読むべき人  ニューラルネットワークの仕組みがわからないままTensorflowやPytorchなどの機械学習APIを使いたくない人 線形代数が苦手だけどニューラルネットワークに興味ある人(極力、図を使って説明しています)   脳のニューロンの仕組み 実際に脳に存在するニューロンの図 脳のニューロンはそのニューロンに集まる信号を一つづつ重み付け(信号を大きくしたり小さくしたりする)してその和が閾値(境目となる値)を超えると他のニューロンに信号を発火して、超えないと他のニューロンに信号を発火しない仕組みになっている。
 脳のニューロンの仕組み 脳のニューロンの振る舞いを形式的に表現すると以下のような図になる。

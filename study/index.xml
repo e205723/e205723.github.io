@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>勉強 on rienNeVaPlusのブログ</title>
-    <link>https://e205723.github.io/study/</link>
-    <description>Recent content in 勉強 on rienNeVaPlusのブログ</description>
+    <title>勉強 on Yoshisaurのブログ</title>
+    <link>https://yoshisaur.net/study/</link>
+    <description>Recent content in 勉強 on Yoshisaurのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 30 Sep 2019 08:00:00 +0000</lastBuildDate><atom:link href="https://e205723.github.io/study/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Sep 2019 08:00:00 +0000</lastBuildDate><atom:link href="https://yoshisaur.net/study/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Twitterのbotを作る&#43;nohupコマンドでdaemon「っぽく」させる</title>
-      <link>https://e205723.github.io/study/twitterbot/</link>
+      <link>https://yoshisaur.net/study/twitterbot/</link>
       <pubDate>Mon, 10 May 2021 00:08:35 +0900</pubDate>
       
-      <guid>https://e205723.github.io/study/twitterbot/</guid>
+      <guid>https://yoshisaur.net/study/twitterbot/</guid>
       <description>Twitterのbotを作りたい B1の頃から、Twitterのbotやりたいなぁ&amp;hellip;。って思ってて、最近ちょっと暇だったので作ってみました。
 未来、賢くなったら、「馬鹿だなぁ自分」って感じでこの記事を振り返りたい。未来、後輩から多少尊敬されるようになったら、後輩達にこの記事を書いた馬鹿な先輩の足跡を見て多少安心してもらえると嬉しいどす。
 そもそもTwitterbotなんか作って何を学びたいの? 結果から言うと全部逃げの選択を取ってしまって、なんか動くけど&amp;hellip;うん、君もっと頑張ろうよ&amp;hellip;。ってなる感じのプロダクトになりました。特にセキュリティ関連の脅威がなくても、まあ動くなら正義じゃん?ってな感じで始めるしかない。とりあえず作る過程で何を学びたいか列挙する。

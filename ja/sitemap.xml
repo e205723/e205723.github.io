@@ -3,98 +3,103 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://e205723.github.io/study/twitterbot/</loc>
-    <lastmod>2021-05-10T00:08:35+09:00</lastmod>
+    <loc>https://yoshisaur.net/memorandum/git/</loc>
+    <lastmod>2021-05-22T00:30:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://e205723.github.io/study_os/day0/</loc>
+    <loc>https://yoshisaur.net/study/twitterbot/</loc>
+    <lastmod>2021-05-10T15:00:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://yoshisaur.net/study_os/day0/</loc>
     <lastmod>2021-04-25T01:14:07+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://e205723.github.io/study_os/</loc>
+    <loc>https://yoshisaur.net/study_os/</loc>
     <lastmod>2021-04-25T01:14:07+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://e205723.github.io/diary/metamorphosis/</loc>
+    <loc>https://yoshisaur.net/diary/metamorphosis/</loc>
     <lastmod>2021-04-24T22:55:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://e205723.github.io/memorandum/vim_normal_mode/</loc>
+    <loc>https://yoshisaur.net/memorandum/vim_normal_mode/</loc>
     <lastmod>2021-04-23T23:03:40+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://e205723.github.io/diary/my_pr/</loc>
+    <loc>https://yoshisaur.net/diary/my_pr/</loc>
     <lastmod>2021-04-10T20:24:22+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://e205723.github.io/study_machine_learning/data_science_for_money_making/</loc>
-    <lastmod>2020-12-24T08:00:00+00:00</lastmod>
+    <loc>https://yoshisaur.net/study_machine_learning/data_science_for_money_making/</loc>
+    <lastmod>2021-05-10T15:00:04+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://e205723.github.io/study_machine_learning/how_to_make_neural_network/</loc>
-    <lastmod>2020-11-29T08:00:00+00:00</lastmod>
+    <loc>https://yoshisaur.net/study_machine_learning/how_to_make_neural_network/</loc>
+    <lastmod>2021-05-10T15:00:04+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://e205723.github.io/</loc>
-    <lastmod>2021-04-25T01:14:07+09:00</lastmod>
+    <loc>https://yoshisaur.net/</loc>
+    <lastmod>2021-05-10T15:00:04+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://e205723.github.io/en/"
+                href="https://yoshisaur.net/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://e205723.github.io/"
+                href="https://yoshisaur.net/"
                 />
   </url>
   
   <url>
-    <loc>https://e205723.github.io/study/</loc>
-    <lastmod>2021-04-10T19:17:31+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://e205723.github.io/en/study/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://e205723.github.io/study/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://e205723.github.io/memorandum/</loc>
+    <loc>https://yoshisaur.net/memorandum/</loc>
     <lastmod>2021-04-24T14:06:36+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://e205723.github.io/diary/</loc>
-    <lastmod>2021-01-10T10:31:02+09:00</lastmod>
+    <loc>https://yoshisaur.net/study/</loc>
+    <lastmod>2021-04-10T19:17:31+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://e205723.github.io/en/diary/"
+                href="https://yoshisaur.net/en/study/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://e205723.github.io/diary/"
+                href="https://yoshisaur.net/study/"
                 />
   </url>
   
   <url>
-    <loc>https://e205723.github.io/study_machine_learning/</loc>
-    <lastmod>2019-09-30T08:00:00+00:00</lastmod>
+    <loc>https://yoshisaur.net/diary/</loc>
+    <lastmod>2021-01-10T10:31:02+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://yoshisaur.net/en/diary/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://yoshisaur.net/diary/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://yoshisaur.net/study_machine_learning/</loc>
+    <lastmod>2021-05-10T15:00:04+09:00</lastmod>
   </url>
   
 </urlset>

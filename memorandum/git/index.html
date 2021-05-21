@@ -53,7 +53,7 @@
 
 
 
-<title>OS自作入門0日目</title>
+<title>Gitの基本</title>
 <meta name="author" content="Yoshisaur">
 <meta name="description" content="機械学習、言語習得、Yoshisaurに興味がありましたら、私のブログを読んでください。">
 
@@ -78,9 +78,9 @@
 
 
 
-<meta property="og:url" content="https://yoshisaur.net/study_os/day0/" />
+<meta property="og:url" content="https://yoshisaur.net/memorandum/git/" />
 <meta property="og:site_name" content="" />
-<meta property="og:title" content="OS自作入門0日目" />
+<meta property="og:title" content="Gitの基本" />
 <meta property="og:description" content="" />
 <meta property="og:image" content="https://yoshisaur.net/" />
 <meta property="og:type" content="article" />
@@ -93,8 +93,8 @@
   <meta name="twitter:site" content="@ie_Yoshisaur" />
 
 
-<meta property="twitter:url" content="https://yoshisaur.net/study_os/day0/" />
-<meta property="twitter:title" content="OS自作入門0日目" />
+<meta property="twitter:url" content="https://yoshisaur.net/memorandum/git/" />
+<meta property="twitter:title" content="Gitの基本" />
 <meta property="twitter:description" content="" />
 <meta property="twitter:image" content="https://yoshisaur.net/" />
 
@@ -123,8 +123,8 @@
       "@type": "WebPage",
       "@id": "https://yoshisaur.net/"
     },
-    "name" : "OS自作入門0日目",
-    "headline" : "OS自作入門0日目",
+    "name" : "Gitの基本",
+    "headline" : "Gitの基本",
     "description" : "",
     "inLanguage" : "ja",
     "image": "https://yoshisaur.net/",
@@ -139,13 +139,13 @@
       }
     },
     "copyrightYear" : "2021",
-    "datePublished": "2021-04-25",
-    "dateModified" : "2021-04-25",
-    "url" : "https://yoshisaur.net/study_os/day0/",
-    "wordCount" : "52",
+    "datePublished": "2021-05-22",
+    "dateModified" : "2021-05-22",
+    "url" : "https://yoshisaur.net/memorandum/git/",
+    "wordCount" : "944",
     "keywords" : [ "Blog" ],
     "genre": ["Blog"],
-    "articleBody": " MacでOSを自作する 「30日でできる! OS自作入門  」という本を使って自作OSの勉強をしようかと思います。本来この本はWindows環境向けなのですが、macOS用の環境を作ってしかも公開してくれている方がいるので、その方のレポジトリ  を使ってこの本を読むにあたっての環境を構築したいと思います。\n自分のMacBookの環境 $sw_vers ProductName:\tmacOS ProductVersion:\t11.2.2 BuildVersion:\t20D80  手順に従って環境を構築します レポジトリのクローン\ngit clone https://github.com/tatsumack/30nichideosjisaku qemu  のinstall\nbrew install qemu qemuのバージョン確認\n$qemu-system-i386 -version QEMU emulator version 5.2.0 Copyright (c) 2003-2020 Fabrice Bellard and the QEMU Project developers $ cd 30nichideosjisaku/01_day/helloos0/ $ make run 動作確認\n$cd 30nichideosjisaku/01_day/helloos0/ $make run このようなWindowが出れば動作確認成功です\n"
+    "articleBody": " なぜこれを書いているか 僕はGitあまり深くやっていないので、勉強用にこの記事を書いてます\nこの記事の対象者  git add, git commit, git pushくらいしかやったことない人 ただぼんやりとしかGitしたことない人 mergeってなんぞや\u0026hellip;って人   注意 この記事の内容は「Githubありき」という感じです\nLinus Torvaldsさんごめんなさい\n登場するgitコマンド 基本的に引数は省力します\n  コマンド 操作     git init ディレクトリをGitで使う宣言   git add ファイル、フォルダをステージングエリアに置く   git status ステージングエリアにあるファイル、フォルダの確認   git diff --cashed ステージングエリアにあるファイルの前のバージョンとの変更点を表示   git commit ステージングエリアにあるファイル、フォルダをリポジトリに移動させてバージョンを確定する   git commit -m エディタを開かずにコミットメッセージを引数として書き、git commitを実行   git commit –amend 直前のコミットを修正する   git log コミットの履歴を表示   git log --oneline コミットのログを1行だけのコンパクトな形で表示する   git log -p commitしたときの前のバージョンとの差分(変更点)を表示する   git log --stat コミットごとに変更されたファイル名を列挙して表示する   git remote ローカルのリポジトリをリモートリポジトリに登録する   git config -l リモートリポジトリの場所を確認する   git push ローカルリポジトリのコミットをリモートリポジトリに反映させる   git reset 指定されたコミットのバージョンへ戻す   git reset --hard HEAD 直前のコミットへ戻る   git reset --hard HEAD^ 前々回のコミットへ戻る   git reset --hard ORIG_HEAD git resetによってキャンセルされたコミットへ戻る   git branch ブランチの一覧の表示   git branch \u0026lt;branch name\u0026gt; \u0026lt;branch name\u0026gt;という名前のbranchを作る   git branch -d 指定されたブランチを消す   git checkout 指定されたのブランチへ移動   git checkout -b 新しいブランチを作って移動する   git merge 現在のブランチへ指定されたブランチにあるファイル、フォルダを反映する    まずはGitで登場する領域から ここでステージングエリアを含む、4つの重要な領域について勉強しましょう\n  領域 概念     作業ディレクトリ ファイルの作成、修正を行う場所   ステージングエリア リポジトリに確定する予定のファイルの置き場所   リポジトリ(ローカル) バージョンが確定したファイルの置き場   リモートリポジトリ ネットワーク上にあるリポジトリ    図にするとこんな感じ\nGitで扱う領域について視覚的に理解できたら実際に手を動かしてみましょう\ngit init ディレクトリを作って、移動\n$ mkdir test $ cd test そしたら、ここでgit init!!\n$ git init これは 「testっていうディレクトリをGitで使うよ」って宣言みたいな感じ\nInitialized empty Git repository in /Users/foo/bar/test/.git/\nみたいのが出ればオッケー\ngit add $ echo \u0026quot;hoge 1\u0026quot; \u0026gt; hoge.txt で文字列hoge 1を一行目に含むhoge.txtを作成\nそして、このファイルを作業ディレクトリからステージングエリアに置くためにgit addというコマンドを使います\n$ git add hoge.txt また、「このファイル、新しく生成したり、編集したりしたけど、ステージングエリアにgit addして置いたっけ\u0026hellip;」ってなることがあると思いますが\n$ git status とすることで、addしたファイル、addがまだされてないファイルの一覧が出ます\n作業ディレクトリのファイルを全部addしたいと思うことがあると思います、そんな時は\n$ git add . でファイル全部をaddすることができます\ngit add .したらgit statusで確認することも忘れずに!\nそして、ファイルがステージングエリアにある状態でdiff --cashedコマンドを叩くと\n$ git diff --cashed addしたファイルの前のバージョンとの変更点が出力されます\nここまでの作業で、下の図の様にhoge.txtを作業ディレクトリからステージングエリアに置くことができました\ngit commit では次は、ステージングエリアからローカルのリポジトリにaddしたファイルをcommitしてみましょう\n$ git commit 上記のコマンドを実行したら下のようにVimが立ち上がります\ncommitするたびに、作業の内容(追加/削除したファイル、編集したファイルの内容などの変更点)をそこに書きます\nなので、立ち上がったVimでiでinsert modeに入って1st commitと打ってください\nそしたらescを押して:wqでVimから抜けてください\n 1 file changed, 1 insertion(+) create mode 100644 hoge.txt こんなログが残されていると思います\nちなみにVimでいちいちメッセージを書くのが面倒だったら\ngit commit -m \u0026quot;1st commit\u0026quot; で-mのオプションを付けてcommitしてもいいです\nそしたらcommitした履歴をgit logコマンドで確認してみましょう\n$ git log このコマンドを打つと下のように出力されるはずです\ncommit c91ff94f6664388c5032a6466f64e00dac908c50 (HEAD -\u0026gt; master) Author: hoge hoge \u0026lt;hoo@bar\u0026gt; Date: Fri May 14 22:27:40 2021 +0900 1st commit git logには色々なオプションがあるので、機能と一緒に羅列していきます\n  オプション 機能     git log --oneline コミットのログを1行だけのコンパクトな形で表示する   git log -p commitしたときの前のバージョンとの差分(変更点)を表示する   git log --stat コミットごとに変更されたファイル名を列挙して表示する    ここまでの作業で下の図まで進めることができました\ngit push ローカルのリポジトリにcommitしたら、リモートリポジトリにpushする段階に入ります\nではまずは、リモートリポジトリを用意しましょう\n上のスクリーンショットのように自分のGithubのリポジトリ閲覧ページへ行って、右上のNewボタンをクリック\nリポジトリの名前を書く、書いたらスクロールダウン\nCreate repositoryボタンをクリック\nリポジトリが作られたら、この画面に飛びます\nローカルのリポジトリを作られたリモートリポジトリに登録するには、git remoteコマンドを使います\n下線部をコピペしてターミナルに貼って実行してください\n$ git remote add origin git@github.com:\u0026lt;Githubのユーザネーム\u0026gt;/test.git ↑のoriginというところはどんな文字列でもいいです\nリモートリポジトリの場所を確認したい場合はgit config -lと叩きましょう\n$ git config -l いろいろ表示されますが\nremote.origin.url=git@github.com:e205723/test.git ↑こんな行があると思います、これでリモートリポジトリの場所を確認する感じです\nそして念願のgit pushです\nリモートリポジトリの登録をしてから、1回目のpushは-u origin masterを添えて実行してください\n$ git push -u origin master 実行に成功すると以下の様なログが出力されます\nEnumerating objects: 3, done. Counting objects: 100% (3/3), done. Writing objects: 100% (3/3), 224 bytes | 224.00 KiB/s, done. Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 To github.com:e205723/test.git * [new branch] master -\u0026gt; master Branch 'master' set up to track remote branch 'master' from 'origin'. ここまでの作業で下の図まで進めることができました\n.gitignore git add .を乱用してgit statusを怠っているとaddしてはいけないファイルをaddしてしまうこともあります\nこういうときに.gitignoreファイルを作成するとgit add .しても特定のファイルがaddされないようにすることができて便利です\n実際に.gitignoreファイルを作ってみましょう\n$ vim .gitignore .DS_Storeファイル、log拡張子のファイルなどはpushしないほうがいいですので\n.DS_Store *.log という風に書いて保存してみましょう\nそうしたらgit add .してもaddされないようになります\ngit commit \u0026ndash;amend 直前のコミットに間違いがあって、新たにcommitするほどでもない間違いのとき、commit --amendを使いましょう\nhoge.txtの中身を\nhoge 1 hoge 2 としましょう\nそして、以下のコマンドを実行します\n$ git add hoge.txt $ git commit -m \u0026quot;add hoge2\u0026quot; このとき、hoge.txtの中身を\nhoge 1 hoge 3 にしてcommitしたかったことに気がついたとします\n実際に、hoge.txtの中身を上記のように書き換えて、add hoge.txtとした後にcommit --amendを実行してみましょう\n$ git add hoge.txt $ git commit --amend 実行すると以下の様な画面になります\nadd hoge2をadd hoge3にしてから保存して抜けてください\nここで\n$ git log とすると\ncommit 7272df0450d989f5403cd234c191609bb50265b5 (HEAD -\u0026gt; master) Author: hoge hoge \u0026lt;hoo@bar\u0026gt; Date: Sat May 15 19:29:58 2021 +0900 add hoge3 commit c91ff94f6664388c5032a6466f64e00dac908c50 (origin/master, origin/HEAD) Author: hoge hoge \u0026lt;hoo@bar\u0026gt; Date: Fri May 14 22:27:40 2021 +0900 1st commit 上のようにコミットのログが出力されます\nこれで無駄にコミットの履歴を増やすことなく、編集したファイルをローカルのリポジトリに置くことができました\ngit reset コミットのログから、任意のバージョンへ戻す方法を紹介します\nまず、hoge.txtの中身を\nhoge 1 hoge 2 hoge 3 にします、ここで\n$ git add hoge.txt とします、ここで「あー、hoge.txtの中身は前のままでよかったな\u0026hellip;」ってなったら\n$ git reset --hard HEAD とすることで、作業ディレクトリが前回のコミットの状態に戻ってステージングエリアも綺麗になります\nここで、hoge.txtの中身を確認してみると\nhoge 1 hoge 3 となって前回のコミットの状態に戻っていることが確認できます\n前々回のコミットに戻すときは\n$ git reset --hard HEAD^ と打ちます、代わりにgit logから取得したidをコピペしていくのでもありです\n↓git logを実行した結果\ncommit 7272df0450d989f5403cd234c191609bb50265b5 (HEAD -\u0026gt; master) Author: hoge hoge \u0026lt;hoo@bar\u0026gt; Date: Sat May 15 19:29:58 2021 +0900 add hoge3 commit c91ff94f6664388c5032a6466f64e00dac908c50 (origin/master, origin/HEAD) Author: hoge hoge \u0026lt;hoo@bar\u0026gt; Date: Fri May 14 22:27:40 2021 +0900 1st commit 前々回のコミットはメッセージが「1st commit」です\nそのコミットのidは例では\nc91ff94f6664388c5032a6466f64e00dac908c50\nとなっていますが先頭の数桁(最低7桁以上)から一意に定まればいいでの先頭7桁だけ取ってgit reset --hardに添えて実行します\n$ git reset --hard c91ff94 と実行してください\nここで、hoge.txtを実行すると\nhoge 1 となり、最初のコミットのバージョンに戻ります\nまた、「git resetコマンドでバージョン戻したけど、もともとのバージョンが実は良かった」なんてときは、git resetによってキャンセルされたコミットがORIG_HEADに1つだけ入っているので\n$ git reset --hard ORIG_HEAD と実行すると、バージョンが戻ります\ngit branch branchの概念を勉強します\nブランチというのは「分岐」や「枝分かれ」などの意味を持ち、別々のバージョンを並行して開発するときに使います\nさっそくgit branchコマンドを実行してみましょう\n$ git branch 実行すると、現在あるブランチの一覧がでます\n* master *がついているブランチは現在のブランチです\nブランチがmasterしかないので、hogeという名前の新しいブランチを作成します\n$ git branch hoge git branchを実行してブランチ確認した結果が↓\n hoge * master *がついているmasterが現在のブランチです\ngit checkoutコマンドでブランチhogeに移動してみましょう\n$ git checkout hoge git branchでブランチ確認した結果が↓\n* hoge master ここで、touch hoge2.txtとしてls\nhoge.txt hoge2.txt ここでgit add、git commitを実行\n$ git add hoge2.txt $ git commit -m \u0026quot;add hoge2.txt\u0026quot; ここでgit logを実行します\ncommit f960b5a75e603759a2dbd9931288d778a509cea9 (HEAD -\u0026gt; hoge) Author: Yoshiaki Sano \u0026lt;hoo@bar\u0026gt; Date: Fri May 21 01:02:41 2021 +0900 add hoge2.txt commit 7272df0450d989f5403cd234c191609bb50265b5 (master) Author: Yoshiaki Sano \u0026lt;hoo@bar\u0026gt; Date: Sat May 15 19:29:58 2021 +0900 add hoge3 commit c91ff94f6664388c5032a6466f64e00dac908c50 (origin/master, origin/HEAD) Author: Yoshiaki Sano \u0026lt;hoo@bar\u0026gt; Date: Fri May 14 22:27:40 2021 +0900 1st commit というふうに表示されます\nメッセージがadd hoge3であるコミット(masterブランチ)からhogeブランチへ分岐しているのでこのような結果になります\nここまでの作業で下の図まで進めることができました\nmasterブランチで作業したくなったら\n$ git checkout master 上記のコマンドでブランチをmasterに変えてください\nそうするとgit logの結果もlsの結果もhogeブランチに分岐する前のmasterブランチの状態に戻ります\ngit merge あるブランチで作成/編集したファイルを別のブランチにも反映させたいときにgit mergeコマンドを使います\ngit checkoutコマンドで、反映対象のブランチに移動します\nhogeにあるファイルをmasterブランチにも存在するようにしたいので\n現在のブランチがmasterでなかったらgit checkout masterを実行します\n$ git checkout master そしたらhogeブランチを対象にgit mergeコマンドを実行してみましょう\n$ git merge hoge 実行すると、hogeにあるファイル、コミットがmasterに反映されます\nlsを実行すると\nhoge.txt hoge2.txt となります\ngit logでコミットログを確認してみると\ncommit f960b5a75e603759a2dbd9931288d778a509cea9 (HEAD -\u0026gt; master, hoge) Author: Yoshiaki Sano \u0026lt;hoo@bar\u0026gt; Date: Fri May 21 01:02:41 2021 +0900 add hoge2.txt commit 7272df0450d989f5403cd234c191609bb50265b5 Author: Yoshiaki Sano \u0026lt;hoo@bar\u0026gt; Date: Sat May 15 19:29:58 2021 +0900 add hoge3 commit c91ff94f6664388c5032a6466f64e00dac908c50 (origin/master, origin/HEAD) Author: Yoshiaki Sano \u0026lt;hoo@bar\u0026gt; Date: Fri May 14 22:27:40 2021 +0900 1st commit という感じで、hoge2.txtが追加されたコミットがmasterにも反映されました\nここまでの作業で下の図まで進めることができました\nまた、hogeブランチを二度と使わないことになって消去したくなったらgit branch -dコマンドを使いましょう\n$ git branch -d hoge と実行するとhogeブランチが消えます、下は実行結果の出力です\nDeleted branch hoge (was f960b5a). 今回のケースでは、この後にgit branchとしてもmasterブランチしか表示されなくなります\nコンフリクトとその解消 hogehogeという名前のブランチを新しく作って、そのブランチに移動しましょう\n$ git branch hogehoge $ git checkout hogehoge としても良いのですが\n$ git checkout -b hogehoge として一気にブランチの生成と移動を行うことができます\n上のコマンドを実行したあとにgit branchを実行した結果が↓\n* hogehoge master hogehogeブランチでhoge.txtを編集しましょう\nhoge 1 hoge 3 から\nhoge 1 hoge 2 hoge 3 にして保存してください\nそうしたら\n$ git add hoge.txt $ git commit -m \u0026quot;add hoge2\u0026quot; として、hogehogeブランチでgit add、git commitしてください\nここで、一旦masterブランチへ移動しましょう\n$ git checkout master そしてmasterブランチのhoge.txtを編集しましょう\nhoge 1 hoge 3 から\nhoge one hoge two hoge three にして保存してください\nそしたら\n$ git add hoge.txt $ git commit -m \u0026quot;change the numerical notation\u0026quot; として、hogehogeブランチでgit add、git commitしてください\nここまでの作業で下の図まで進めることができました\nここからmasterブランチにhogehogeブランチをmergeしてみましょう\nmasterブランチにて\n$ git merge hogehoge とすると\nAuto-merging hoge.txt CONFLICT (content): Merge conflict in hoge.txt Automatic merge failed; fix conflicts and then commit the result. このようにコンフリクトが起きたという旨のメッセージが出力されます\nコンフリクトとは、mergeにより結合する際に、それぞれのブランチで同じファイルの重複する部分が変更されていると発生する衝突のことを意味します\nここからはコンフリクトの解消方法について勉強していきます\n現在の状況でgit statusを実行したときの出力の中に\nUnmerged paths: (use \u0026quot;git add \u0026lt;file\u0026gt;...\u0026quot; to mark resolution) both modified: hoge.txt というメッセージがあります\nこれは両方のブランチでhoge.txtが編集されているという意味です\nコンフリクトはこのhoge.txtを編集することで解決することができます\n$ vim hoge.txt とすると\n\u0026lt;\u0026lt;\u0026lt;\u0026lt;\u0026lt;\u0026lt;\u0026lt; HEAD hoge one hoge two hoge three ======= hoge 1 hoge 2 hoge 3 \u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt; hogehoge hoge.txtの中身が↑のようになっていることが確認できます\n\u0026lt;\u0026lt;\u0026lt;\u0026lt;\u0026lt;\u0026lt;\u0026lt; HEADと=======の間は、masterブランチのhoge.txtの内容です\n=======と\u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt; hogehogeの間は、hogehogeブランチのhoge.txtの内容です\nコンフリクトは\u0026lt;\u0026lt;\u0026lt;\u0026lt;\u0026lt;\u0026lt;\u0026lt; HEADと=======と\u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt;\u0026gt; hogehogeを消して、masterブランチのhoge.txtの内容とhogehogeブランチのhoge.txtの内容を参考にして、hoge.txtの中身を修正することで解消されます\nhoge.txtの中身をmasterブランチの1,3行目、hogehogeブランチの2行目を参考にして以下のように修正してください\nhoge one hoge 2 hoge three 修正したら保存して\n$ git add hoge.txt $ git commit -m \u0026quot;fix conflict\u0026quot; としてコンフリクトを解消したhoge.txtをgit add、git commitしてください\nこれでコンフリクトが解消されました\n"
   }
 </script>
 
@@ -177,7 +177,7 @@
       <div class="column is-8 is-offset-2">
         <h1 class="title is-spaced">
           
-            OS自作入門0日目
+            Gitの基本
           
         </h1>
         <p class="subtitle is-6">
@@ -189,9 +189,9 @@
   <ul><li>
       <a href="https://yoshisaur.net/">Yoshisaur</a>
     </li><li>
-      <a href="https://yoshisaur.net/study_os/">Study_os</a>
+      <a href="https://yoshisaur.net/memorandum/">備忘録</a>
     </li><li class="is-active">
-      <a href="#" aria-current="page" class="normal-link">OS自作入門0日目</a>
+      <a href="#" aria-current="page" class="normal-link">Gitの基本</a>
     </li></ul>
 </nav>
       </div>
@@ -236,7 +236,7 @@
 
             
 
-<a class="button is-pulled-right normal-link" href="https://github.com/peaceiris/hugo-theme-iris/edit/master/exampleSite/content/ja/study_os/day0.md">Edit</a>
+<a class="button is-pulled-right normal-link" href="https://github.com/peaceiris/hugo-theme-iris/edit/master/exampleSite/content/ja/memorandum/git.md">Edit</a>
 
 
             
@@ -257,55 +257,564 @@
 
 
   
-</section><section class="section"><h2 class="title is-3" id="macでosを自作する" class="title is-5">MacでOSを自作する</h2>
+<h3 id="なぜこれを書いているか" class="title is-5">なぜこれを書いているか</h3>
 
-<p>「<a
-  href="https://www.amazon.co.jp/30%E6%97%A5%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B-OS%E8%87%AA%E4%BD%9C%E5%85%A5%E9%96%80-%E5%B7%9D%E5%90%88-%E7%A7%80%E5%AE%9F-ebook/dp/B00IR1HYI0/ref=sr_1_1?adgrpid=103879434706&amp;dchild=1&amp;gclid=CjwKCAjwg4-EBhBwEiwAzYAlsjAlULfFE38PlApuNzYealG_zn3f-wXh9x9xsqYVI0tfga1SS-0gBxoCC5oQAvD_BwE&amp;hvadid=448588871691&amp;hvdev=c&amp;hvlocphy=9053273&amp;hvnetw=g&amp;hvqmt=e&amp;hvrand=12615786351100528979&amp;hvtargid=kwd-525591903592&amp;hydadcr=27267_11561158&amp;jp-ad-ap=0&amp;keywords=30%E6%97%A5%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B&#43;os%E8%87%AA%E4%BD%9C%E5%85%A5%E9%96%80&amp;qid=1619277691&amp;sr=8-1"
-  
-  target="_blank" rel="noopener noreferrer">
-  30日でできる! OS自作入門
-</a>
-」という本を使って自作OSの勉強をしようかと思います。本来この本はWindows環境向けなのですが、macOS用の環境を作ってしかも公開してくれている方がいるので、その方の<a
-  href="https://github.com/tatsumack/30nichideosjisaku"
-  
-  target="_blank" rel="noopener noreferrer">
-  レポジトリ
-</a>
-を使ってこの本を読むにあたっての環境を構築したいと思います。</p>
+<p>僕はGitあまり深くやっていないので、勉強用にこの記事を書いてます</p>
 
-<h3 id="自分のmacbookの環境" class="title is-5">自分のMacBookの環境</h3>
+<h3 id="この記事の対象者" class="title is-5">この記事の対象者</h3>
 
-<pre><code>$sw_vers
+<div class="content">
+  <ul>
+<li><code>git add</code>, <code>git commit</code>, <code>git push</code>くらいしかやったことない人</li>
+<li>ただぼんやりとしかGitしたことない人</li>
+<li><code>merge</code>ってなんぞや&hellip;って人</li>
+</ul>
 
-ProductName:	macOS
-ProductVersion:	11.2.2
-BuildVersion:	20D80
-</code></pre><hr>
+</div>
 
-<h3 id="手順に従って環境を構築します" class="title is-5">手順に従って環境を構築します</h3>
 
-<p>レポジトリのクローン</p>
-<pre><code>git clone https://github.com/tatsumack/30nichideosjisaku
-</code></pre><p><a
-  href="https://www.weblio.jp/content/qemu"
-  
-  target="_blank" rel="noopener noreferrer">
-  qemu
-</a>
-のinstall</p>
-<pre><code>brew install qemu
-</code></pre><p>qemuのバージョン確認</p>
-<pre><code>$qemu-system-i386 -version
+<h3 id="注意" class="title is-5">注意</h3>
 
-QEMU emulator version 5.2.0
-Copyright (c) 2003-2020 Fabrice Bellard and the QEMU Project developers
-</code></pre><pre><code>$ cd 30nichideosjisaku/01_day/helloos0/
-$ make run
-</code></pre><p>動作確認</p>
-<pre><code>$cd 30nichideosjisaku/01_day/helloos0/
-$make run
-</code></pre><p>このようなWindowが出れば動作確認成功です</p>
-<img src="https://yoshisaur.net/images/day0/console.jpg">
+<p>この記事の内容は「Githubありき」という感じです</p>
+<p>Linus Torvaldsさんごめんなさい</p>
+
+</section><section class="section"><h2 class="title is-3" id="登場するgitコマンド" class="title is-5">登場するgitコマンド</h2>
+
+<p>基本的に引数は省力します</p>
+
+
+<table class="table is-striped is-hoverable">
+<thead>
+<tr>
+<th>コマンド</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git init</td>
+<td>ディレクトリをGitで使う宣言</td>
+</tr>
+<tr>
+<td>git add</td>
+<td>ファイル、フォルダをステージングエリアに置く</td>
+</tr>
+<tr>
+<td>git status</td>
+<td>ステージングエリアにあるファイル、フォルダの確認</td>
+</tr>
+<tr>
+<td>git diff --cashed</td>
+<td>ステージングエリアにあるファイルの前のバージョンとの変更点を表示</td>
+</tr>
+<tr>
+<td>git commit</td>
+<td>ステージングエリアにあるファイル、フォルダをリポジトリに移動させてバージョンを確定する</td>
+</tr>
+<tr>
+<td>git commit -m</td>
+<td>エディタを開かずにコミットメッセージを引数として書き、git commitを実行</td>
+</tr>
+<tr>
+<td>git commit –amend</td>
+<td>直前のコミットを修正する</td>
+</tr>
+<tr>
+<td>git log</td>
+<td>コミットの履歴を表示</td>
+</tr>
+<tr>
+<td>git log --oneline</td>
+<td>コミットのログを1行だけのコンパクトな形で表示する</td>
+</tr>
+<tr>
+<td>git log -p</td>
+<td>commitしたときの前のバージョンとの差分(変更点)を表示する</td>
+</tr>
+<tr>
+<td>git log --stat</td>
+<td>コミットごとに変更されたファイル名を列挙して表示する</td>
+</tr>
+<tr>
+<td>git remote</td>
+<td>ローカルのリポジトリをリモートリポジトリに登録する</td>
+</tr>
+<tr>
+<td>git config -l</td>
+<td>リモートリポジトリの場所を確認する</td>
+</tr>
+<tr>
+<td>git push</td>
+<td>ローカルリポジトリのコミットをリモートリポジトリに反映させる</td>
+</tr>
+<tr>
+<td>git reset</td>
+<td>指定されたコミットのバージョンへ戻す</td>
+</tr>
+<tr>
+<td>git reset --hard HEAD</td>
+<td>直前のコミットへ戻る</td>
+</tr>
+<tr>
+<td>git reset --hard HEAD^</td>
+<td>前々回のコミットへ戻る</td>
+</tr>
+<tr>
+<td>git reset --hard ORIG_HEAD</td>
+<td>git resetによってキャンセルされたコミットへ戻る</td>
+</tr>
+<tr>
+<td>git branch</td>
+<td>ブランチの一覧の表示</td>
+</tr>
+<tr>
+<td>git branch &lt;branch name&gt;</td>
+<td>&lt;branch name&gt;という名前のbranchを作る</td>
+</tr>
+<tr>
+<td>git branch -d</td>
+<td>指定されたブランチを消す</td>
+</tr>
+<tr>
+<td>git checkout</td>
+<td>指定されたのブランチへ移動</td>
+</tr>
+<tr>
+<td>git checkout -b</td>
+<td>新しいブランチを作って移動する</td>
+</tr>
+<tr>
+<td>git merge</td>
+<td>現在のブランチへ指定されたブランチにあるファイル、フォルダを反映する</td>
+</tr>
+</tbody>
+</table>
+
+
+
+</section><section class="section"><h2 class="title is-3" id="まずはgitで登場する領域から" class="title is-5">まずはGitで登場する領域から</h2>
+
+<p>ここで<strong>ステージングエリア</strong>を含む、4つの重要な領域について勉強しましょう</p>
+
+
+<table class="table is-striped is-hoverable">
+<thead>
+<tr>
+<th>領域</th>
+<th>概念</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>作業ディレクトリ</td>
+<td>ファイルの作成、修正を行う場所</td>
+</tr>
+<tr>
+<td>ステージングエリア</td>
+<td>リポジトリに確定する予定のファイルの置き場所</td>
+</tr>
+<tr>
+<td>リポジトリ(ローカル)</td>
+<td>バージョンが確定したファイルの置き場</td>
+</tr>
+<tr>
+<td>リモートリポジトリ</td>
+<td>ネットワーク上にあるリポジトリ</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>図にするとこんな感じ</p>
+<img src="https://yoshisaur.net/images/git/1.png" alt="1.png">
+<p>Gitで扱う領域について視覚的に理解できたら実際に手を動かしてみましょう</p>
+
+</section><section class="section"><h2 class="title is-3" id="git-init" class="title is-5">git init</h2>
+
+<p>ディレクトリを作って、移動</p>
+<pre><code>$ mkdir test
+$ cd test 
+</code></pre><p>そしたら、ここで<code>git init</code>!!</p>
+<pre><code>$ git init
+</code></pre><p>これは 「<code>test</code>っていうディレクトリをGitで使うよ」って宣言みたいな感じ</p>
+<p><code>Initialized empty Git repository in /Users/foo/bar/test/.git/</code></p>
+<p>みたいのが出ればオッケー</p>
+
+</section><section class="section"><h2 class="title is-3" id="git-add" class="title is-5">git add</h2>
+
+<pre><code>$ echo &quot;hoge 1&quot; &gt; hoge.txt
+</code></pre><p>で文字列<code>hoge 1</code>を一行目に含む<code>hoge.txt</code>を作成</p>
+<p>そして、このファイルを<strong>作業ディレクトリ</strong>から<strong>ステージングエリア</strong>に置くために<code>git add</code>というコマンドを使います</p>
+<pre><code>$ git add hoge.txt
+</code></pre><p>また、「このファイル、新しく生成したり、編集したりしたけど、ステージングエリアに<code>git add</code>して置いたっけ&hellip;」ってなることがあると思いますが</p>
+<pre><code>$ git status
+</code></pre><p>とすることで、<code>add</code>したファイル、<code>add</code>がまだされてないファイルの一覧が出ます</p>
+<p>作業ディレクトリのファイルを全部<code>add</code>したいと思うことがあると思います、そんな時は</p>
+<pre><code>$ git add .
+</code></pre><p>でファイル全部を<code>add</code>することができます</p>
+<p><code>git add .</code>したら<code>git status</code>で確認することも忘れずに!</p>
+<p>そして、ファイルがステージングエリアにある状態で<code>diff --cashed</code>コマンドを叩くと</p>
+<pre><code>$ git diff --cashed
+</code></pre><p><code>add</code>したファイルの前のバージョンとの変更点が出力されます</p>
+<p>ここまでの作業で、下の図の様に<code>hoge.txt</code>を<strong>作業ディレクトリ</strong>から<strong>ステージングエリア</strong>に置くことができました</p>
+<img src="https://yoshisaur.net/images/git/2.png" alt="2.png">
+
+</section><section class="section"><h2 class="title is-3" id="git-commit" class="title is-5">git commit</h2>
+
+<p>では次は、<strong>ステージングエリア</strong>からローカルの<strong>リポジトリ</strong>に<strong>add</strong>したファイルを<code>commit</code>してみましょう</p>
+<pre><code>$ git commit
+</code></pre><p>上記のコマンドを実行したら下のようにVimが立ち上がります</p>
+<img src="https://yoshisaur.net/images/git/3.png" alt="3.png">
+<p><code>commit</code>するたびに、作業の内容(追加/削除したファイル、編集したファイルの内容などの変更点)をそこに書きます</p>
+<p>なので、立ち上がったVimで<code>i</code>で<strong>insert mode</strong>に入って<code>1st commit</code>と打ってください</p>
+<img src="https://yoshisaur.net/images/git/4.png" alt="4.png">
+<p>そしたら<code>esc</code>を押して<code>:wq</code>でVimから抜けてください</p>
+<pre><code> 1 file changed, 1 insertion(+)
+ create mode 100644 hoge.txt
+</code></pre><p>こんなログが残されていると思います</p>
+<p>ちなみにVimでいちいちメッセージを書くのが面倒だったら</p>
+<pre><code>git commit -m &quot;1st commit&quot;
+</code></pre><p>で<code>-m</code>のオプションを付けて<code>commit</code>してもいいです</p>
+<p>そしたら<code>commit</code>した履歴を<code>git log</code>コマンドで確認してみましょう</p>
+<pre><code>$ git log
+</code></pre><p>このコマンドを打つと下のように出力されるはずです</p>
+<pre><code>commit c91ff94f6664388c5032a6466f64e00dac908c50 (HEAD -&gt; master)
+Author: hoge hoge &lt;hoo@bar&gt;
+Date:   Fri May 14 22:27:40 2021 +0900
+
+    1st commit
+</code></pre><p><code>git log</code>には色々なオプションがあるので、機能と一緒に羅列していきます</p>
+
+
+<table class="table is-striped is-hoverable">
+<thead>
+<tr>
+<th>オプション</th>
+<th>機能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git log --oneline</td>
+<td>コミットのログを1行だけのコンパクトな形で表示する</td>
+</tr>
+<tr>
+<td>git log -p</td>
+<td>commitしたときの前のバージョンとの差分(変更点)を表示する</td>
+</tr>
+<tr>
+<td>git log --stat</td>
+<td>コミットごとに変更されたファイル名を列挙して表示する</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>ここまでの作業で下の図まで進めることができました</p>
+<img src="https://yoshisaur.net/images/git/5.png" alt="5.png">
+
+</section><section class="section"><h2 class="title is-3" id="git-push" class="title is-5">git push</h2>
+
+<p>ローカルの<strong>リポジトリ</strong>に<code>commit</code>したら、<strong>リモートリポジトリ</strong>に<code>push</code>する段階に入ります</p>
+<p>ではまずは、<strong>リモートリポジトリ</strong>を用意しましょう</p>
+<img src="https://yoshisaur.net/images/git/6.png" alt="6.png">
+<p>上のスクリーンショットのように自分のGithubのリポジトリ閲覧ページへ行って、右上の<code>New</code>ボタンをクリック</p>
+<img src="https://yoshisaur.net/images/git/7.png" alt="7.png">
+<p>リポジトリの名前を書く、書いたらスクロールダウン</p>
+<img src="https://yoshisaur.net/images/git/8.png" alt="8.png">
+<p><code>Create repository</code>ボタンをクリック</p>
+<img src="https://yoshisaur.net/images/git/9.png" alt="9.png">
+<p>リポジトリが作られたら、この画面に飛びます</p>
+<p>ローカルの<strong>リポジトリ</strong>を作られた<strong>リモートリポジトリ</strong>に登録するには、<code>git remote</code>コマンドを使います</p>
+<p>下線部をコピペしてターミナルに貼って実行してください</p>
+<pre><code>$ git remote add origin git@github.com:&lt;Githubのユーザネーム&gt;/test.git
+</code></pre><p>↑の<code>origin</code>というところはどんな文字列でもいいです</p>
+<p>リモートリポジトリの場所を確認したい場合は<code>git config -l</code>と叩きましょう</p>
+<pre><code>$ git config -l
+</code></pre><p>いろいろ表示されますが</p>
+<pre><code>remote.origin.url=git@github.com:e205723/test.git
+</code></pre><p>↑こんな行があると思います、これでリモートリポジトリの場所を確認する感じです</p>
+<p>そして念願の<code>git push</code>です</p>
+<p>リモートリポジトリの登録をしてから、1回目の<code>push</code>は<code>-u origin master</code>を添えて実行してください</p>
+<pre><code>$ git push -u origin master
+</code></pre><p>実行に成功すると以下の様なログが出力されます</p>
+<pre><code>Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 224 bytes | 224.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:e205723/test.git
+ * [new branch]      master -&gt; master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+</code></pre><p>ここまでの作業で下の図まで進めることができました</p>
+<img src="https://yoshisaur.net/images/git/10.png" alt="10.png">
+
+</section><section class="section"><h2 class="title is-3" id="gitignore" class="title is-5">.gitignore</h2>
+
+<p><code>git add .</code>を乱用して<code>git status</code>を怠っていると<code>add</code>してはいけないファイルを<code>add</code>してしまうこともあります</p>
+<p>こういうときに<code>.gitignore</code>ファイルを作成すると<code>git add .</code>しても特定のファイルが<code>add</code>されないようにすることができて便利です</p>
+<p>実際に<code>.gitignore</code>ファイルを作ってみましょう</p>
+<pre><code>$ vim .gitignore
+</code></pre><p><code>.DS_Store</code>ファイル、<code>log</code>拡張子のファイルなどは<code>push</code>しないほうがいいですので</p>
+<pre><code>.DS_Store
+
+*.log
+</code></pre><p>という風に書いて保存してみましょう</p>
+<p>そうしたら<code>git add .</code>しても<code>add</code>されないようになります</p>
+
+</section><section class="section"><h2 class="title is-3" id="git-commit---amend" class="title is-5">git commit &ndash;amend</h2>
+
+<p>直前のコミットに間違いがあって、新たに<code>commit</code>するほどでもない間違いのとき、<code>commit --amend</code>を使いましょう</p>
+<p><code>hoge.txt</code>の中身を</p>
+<pre><code>hoge 1
+hoge 2
+</code></pre><p>としましょう</p>
+<p>そして、以下のコマンドを実行します</p>
+<pre><code>$ git add hoge.txt
+$ git commit -m &quot;add hoge2&quot;
+</code></pre><p>このとき、<code>hoge.txt</code>の中身を</p>
+<pre><code>hoge 1
+hoge 3
+</code></pre><p>にして<code>commit</code>したかったことに気がついたとします</p>
+<p>実際に、<code>hoge.txt</code>の中身を上記のように書き換えて、<code>add hoge.txt</code>とした後に<code>commit --amend</code>を実行してみましょう</p>
+<pre><code>$ git add hoge.txt
+$ git commit --amend
+</code></pre><p>実行すると以下の様な画面になります</p>
+<img src="https://yoshisaur.net/images/git/11.png" alt="11.png">
+<p><code>add hoge2</code>を<code>add hoge3</code>にしてから保存して抜けてください</p>
+<p>ここで</p>
+<pre><code>$ git log
+</code></pre><p>とすると</p>
+<pre><code>commit 7272df0450d989f5403cd234c191609bb50265b5 (HEAD -&gt; master)
+Author: hoge hoge &lt;hoo@bar&gt; 
+Date:   Sat May 15 19:29:58 2021 +0900
+
+    add hoge3
+
+commit c91ff94f6664388c5032a6466f64e00dac908c50 (origin/master, origin/HEAD)
+Author: hoge hoge &lt;hoo@bar&gt;
+Date:   Fri May 14 22:27:40 2021 +0900
+
+    1st commit
+</code></pre><p>上のようにコミットのログが出力されます</p>
+<p>これで無駄にコミットの履歴を増やすことなく、編集したファイルをローカルの<strong>リポジトリ</strong>に置くことができました</p>
+
+</section><section class="section"><h2 class="title is-3" id="git-reset" class="title is-5">git reset</h2>
+
+<p>コミットのログから、任意のバージョンへ戻す方法を紹介します</p>
+<p>まず、<code>hoge.txt</code>の中身を</p>
+<pre><code>hoge 1
+hoge 2
+hoge 3
+</code></pre><p>にします、ここで</p>
+<pre><code>$ git add hoge.txt
+</code></pre><p>とします、ここで「あー、<code>hoge.txt</code>の中身は前のままでよかったな&hellip;」ってなったら</p>
+<pre><code>$ git reset --hard HEAD
+</code></pre><p>とすることで、<strong>作業ディレクトリ</strong>が前回のコミットの状態に戻って<strong>ステージングエリア</strong>も綺麗になります</p>
+<p>ここで、<code>hoge.txt</code>の中身を確認してみると</p>
+<pre><code>hoge 1
+hoge 3
+</code></pre><p>となって前回のコミットの状態に戻っていることが確認できます</p>
+<p>前々回のコミットに戻すときは</p>
+<pre><code>$ git reset --hard HEAD^
+</code></pre><p>と打ちます、代わりに<code>git log</code>から取得したidをコピペしていくのでもありです</p>
+<p>↓<code>git log</code>を実行した結果</p>
+<pre><code>commit 7272df0450d989f5403cd234c191609bb50265b5 (HEAD -&gt; master)
+Author: hoge hoge &lt;hoo@bar&gt;
+Date:   Sat May 15 19:29:58 2021 +0900
+
+    add hoge3
+
+commit c91ff94f6664388c5032a6466f64e00dac908c50 (origin/master, origin/HEAD)
+Author: hoge hoge &lt;hoo@bar&gt;
+Date:   Fri May 14 22:27:40 2021 +0900
+
+    1st commit
+</code></pre><p>前々回のコミットはメッセージが「1st commit」です</p>
+<p>そのコミットのidは例では</p>
+<p><code>c91ff94f6664388c5032a6466f64e00dac908c50</code></p>
+<p>となっていますが先頭の数桁(最低7桁以上)から一意に定まればいいでの先頭7桁だけ取って<code>git reset --hard</code>に添えて実行します</p>
+<pre><code>$ git reset --hard c91ff94
+</code></pre><p>と実行してください</p>
+<p>ここで、<code>hoge.txt</code>を実行すると</p>
+<pre><code>hoge 1
+</code></pre><p>となり、最初のコミットのバージョンに戻ります</p>
+<p>また、「<code>git reset</code>コマンドでバージョン戻したけど、もともとのバージョンが実は良かった」なんてときは、<code>git reset</code>によってキャンセルされたコミットが<code>ORIG_HEAD</code>に1つだけ入っているので</p>
+<pre><code>$ git reset --hard ORIG_HEAD
+</code></pre><p>と実行すると、バージョンが戻ります</p>
+
+</section><section class="section"><h2 class="title is-3" id="git-branch" class="title is-5">git branch</h2>
+
+<p><code>branch</code>の概念を勉強します</p>
+<p>ブランチというのは「分岐」や「枝分かれ」などの意味を持ち、別々のバージョンを並行して開発するときに使います</p>
+<img src="https://yoshisaur.net/images/git/12.png" alt="12.png">
+<p>さっそく<code>git branch</code>コマンドを実行してみましょう</p>
+<pre><code>$ git branch
+</code></pre><p>実行すると、現在あるブランチの一覧がでます</p>
+<pre><code>* master
+</code></pre><p><code>*</code>がついているブランチは現在のブランチです</p>
+<p>ブランチが<code>master</code>しかないので、<code>hoge</code>という名前の新しいブランチを作成します</p>
+<pre><code>$ git branch hoge
+</code></pre><p><code>git branch</code>を実行してブランチ確認した結果が↓</p>
+<pre><code>  hoge
+* master
+</code></pre><p><code>*</code>がついている<code>master</code>が現在のブランチです</p>
+<p><code>git checkout</code>コマンドでブランチ<code>hoge</code>に移動してみましょう</p>
+<pre><code>$ git checkout hoge
+</code></pre><p><code>git branch</code>でブランチ確認した結果が↓</p>
+<pre><code>* hoge
+  master
+</code></pre><p>ここで、<code>touch hoge2.txt</code>として<code>ls</code></p>
+<pre><code>hoge.txt   hoge2.txt
+</code></pre><p>ここで<code>git add</code>、<code>git commit</code>を実行</p>
+<pre><code>$ git add hoge2.txt
+$ git commit -m &quot;add hoge2.txt&quot;
+</code></pre><p>ここで<code>git log</code>を実行します</p>
+<pre><code>commit f960b5a75e603759a2dbd9931288d778a509cea9 (HEAD -&gt; hoge)
+Author: Yoshiaki Sano &lt;hoo@bar&gt;
+Date:   Fri May 21 01:02:41 2021 +0900
+
+    add hoge2.txt
+
+commit 7272df0450d989f5403cd234c191609bb50265b5 (master)
+Author: Yoshiaki Sano &lt;hoo@bar&gt;
+Date:   Sat May 15 19:29:58 2021 +0900
+
+    add hoge3
+
+commit c91ff94f6664388c5032a6466f64e00dac908c50 (origin/master, origin/HEAD)
+Author: Yoshiaki Sano &lt;hoo@bar&gt;
+Date:   Fri May 14 22:27:40 2021 +0900
+
+    1st commit
+</code></pre><p>というふうに表示されます</p>
+<p>メッセージが<code>add hoge3</code>であるコミット(<code>master</code>ブランチ)から<code>hoge</code>ブランチへ分岐しているのでこのような結果になります</p>
+<p>ここまでの作業で下の図まで進めることができました</p>
+<img src="https://yoshisaur.net/images/git/13.png" alt="13.png">
+<p><code>master</code>ブランチで作業したくなったら</p>
+<pre><code>$ git checkout master
+</code></pre><p>上記のコマンドでブランチを<code>master</code>に変えてください</p>
+<p>そうすると<code>git log</code>の結果も<code>ls</code>の結果も<code>hoge</code>ブランチに分岐する前の<code>master</code>ブランチの状態に戻ります</p>
+
+</section><section class="section"><h2 class="title is-3" id="git-merge" class="title is-5">git merge</h2>
+
+<p>あるブランチで作成/編集したファイルを別のブランチにも反映させたいときに<code>git merge</code>コマンドを使います</p>
+<p><code>git checkout</code>コマンドで、反映対象のブランチに移動します</p>
+<p><code>hoge</code>にあるファイルを<code>master</code>ブランチにも存在するようにしたいので</p>
+<p>現在のブランチが<code>master</code>でなかったら<code>git checkout master</code>を実行します</p>
+<pre><code>$ git checkout master
+</code></pre><p>そしたら<code>hoge</code>ブランチを対象に<code>git merge</code>コマンドを実行してみましょう</p>
+<pre><code>$ git merge hoge
+</code></pre><p>実行すると、<code>hoge</code>にあるファイル、コミットが<code>master</code>に反映されます</p>
+<p><code>ls</code>を実行すると</p>
+<pre><code>hoge.txt   hoge2.txt
+</code></pre><p>となります</p>
+<p><code>git log</code>でコミットログを確認してみると</p>
+<pre><code>commit f960b5a75e603759a2dbd9931288d778a509cea9 (HEAD -&gt; master, hoge)
+Author: Yoshiaki Sano &lt;hoo@bar&gt;
+Date:   Fri May 21 01:02:41 2021 +0900
+
+    add hoge2.txt
+
+commit 7272df0450d989f5403cd234c191609bb50265b5
+Author: Yoshiaki Sano &lt;hoo@bar&gt;
+Date:   Sat May 15 19:29:58 2021 +0900
+
+    add hoge3
+
+commit c91ff94f6664388c5032a6466f64e00dac908c50 (origin/master, origin/HEAD)
+Author: Yoshiaki Sano &lt;hoo@bar&gt;
+Date:   Fri May 14 22:27:40 2021 +0900
+
+    1st commit
+</code></pre><p>という感じで、<code>hoge2.txt</code>が追加されたコミットがmasterにも反映されました</p>
+<p>ここまでの作業で下の図まで進めることができました</p>
+<img src="https://yoshisaur.net/images/git/14_.png" alt="14.png">
+<p>また、<code>hoge</code>ブランチを二度と使わないことになって消去したくなったら<code>git branch -d</code>コマンドを使いましょう</p>
+<pre><code>$ git branch -d hoge
+</code></pre><p>と実行すると<code>hoge</code>ブランチが消えます、下は実行結果の出力です</p>
+<pre><code>Deleted branch hoge (was f960b5a).
+</code></pre><p>今回のケースでは、この後に<code>git branch</code>としても<code>master</code>ブランチしか表示されなくなります</p>
+
+<h3 id="コンフリクトとその解消" class="title is-5">コンフリクトとその解消</h3>
+
+<p><code>hogehoge</code>という名前のブランチを新しく作って、そのブランチに移動しましょう</p>
+<pre><code>$ git branch hogehoge
+$ git checkout hogehoge
+</code></pre><p>としても良いのですが</p>
+<pre><code>$ git checkout -b hogehoge
+</code></pre><p>として一気にブランチの生成と移動を行うことができます</p>
+<p>上のコマンドを実行したあとに<code>git branch</code>を実行した結果が↓</p>
+<pre><code>* hogehoge
+  master
+</code></pre><p><code>hogehoge</code>ブランチで<code>hoge.txt</code>を編集しましょう</p>
+<pre><code>hoge 1
+hoge 3
+</code></pre><p>から</p>
+<pre><code>hoge 1
+hoge 2
+hoge 3
+</code></pre><p>にして保存してください</p>
+<p>そうしたら</p>
+<pre><code>$ git add hoge.txt
+$ git commit -m &quot;add hoge2&quot;
+</code></pre><p>として、<code>hogehoge</code>ブランチで<code>git add</code>、<code>git commit</code>してください</p>
+<p>ここで、一旦<code>master</code>ブランチへ移動しましょう</p>
+<pre><code>$ git checkout master
+</code></pre><p>そして<code>master</code>ブランチのhoge.txtを編集しましょう</p>
+<pre><code>hoge 1
+hoge 3
+</code></pre><p>から</p>
+<pre><code>hoge one
+hoge two
+hoge three
+</code></pre><p>にして保存してください</p>
+<p>そしたら</p>
+<pre><code>$ git add hoge.txt
+$ git commit -m &quot;change the numerical notation&quot;
+</code></pre><p>として、<code>hogehoge</code>ブランチで<code>git add</code>、<code>git commit</code>してください</p>
+<p>ここまでの作業で下の図まで進めることができました</p>
+<img src="https://yoshisaur.net/images/git/15.png" alt="15.png">
+<p>ここから<code>master</code>ブランチに<code>hogehoge</code>ブランチを<code>merge</code>してみましょう</p>
+<p><code>master</code>ブランチにて</p>
+<pre><code>$ git merge hogehoge
+</code></pre><p>とすると</p>
+<pre><code>Auto-merging hoge.txt
+CONFLICT (content): Merge conflict in hoge.txt
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre><p>このように<strong>コンフリクト</strong>が起きたという旨のメッセージが出力されます</p>
+<p><strong>コンフリクト</strong>とは、<code>merge</code>により結合する際に、それぞれのブランチで同じファイルの重複する部分が変更されていると発生する衝突のことを意味します</p>
+<p>ここからは<strong>コンフリクト</strong>の解消方法について勉強していきます</p>
+<p>現在の状況で<code>git status</code>を実行したときの出力の中に</p>
+<pre><code>Unmerged paths:
+  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
+	both modified:   hoge.txt
+</code></pre><p>というメッセージがあります</p>
+<p>これは両方のブランチで<code>hoge.txt</code>が編集されているという意味です</p>
+<p>コンフリクトはこの<code>hoge.txt</code>を編集することで解決することができます</p>
+<pre><code>$ vim hoge.txt
+</code></pre><p>とすると</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+hoge one
+hoge two
+hoge three
+=======
+hoge 1
+hoge 2
+hoge 3
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; hogehoge
+</code></pre><p><code>hoge.txt</code>の中身が↑のようになっていることが確認できます</p>
+<p><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>と<code>=======</code>の間は、<code>master</code>ブランチの<code>hoge.txt</code>の内容です</p>
+<p><code>=======</code>と<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; hogehoge</code>の間は、<code>hogehoge</code>ブランチの<code>hoge.txt</code>の内容です</p>
+<p>コンフリクトは<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>と<code>=======</code>と<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; hogehoge</code>を消して、<code>master</code>ブランチの<code>hoge.txt</code>の内容と<code>hogehoge</code>ブランチの<code>hoge.txt</code>の内容を参考にして、<code>hoge.txt</code>の中身を修正することで解消されます</p>
+<p><code>hoge.txt</code>の中身を<code>master</code>ブランチの1,3行目、<code>hogehoge</code>ブランチの2行目を参考にして以下のように修正してください</p>
+<pre><code>hoge one
+hoge 2
+hoge three
+</code></pre><p>修正したら保存して</p>
+<pre><code>$ git add hoge.txt
+$ git commit -m &quot;fix conflict&quot;
+</code></pre><p>として<strong>コンフリクト</strong>を解消した<code>hoge.txt</code>を<code>git add</code>、<code>git commit</code>してください</p>
+<p>これで<strong>コンフリクト</strong>が解消されました</p>
 
 </section>
 
